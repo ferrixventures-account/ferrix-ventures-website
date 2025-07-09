@@ -480,6 +480,55 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Service Portfolio Section */}
+      <section id="services" className="py-20 px-4 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              {currentContent.services.title}
+            </h2>
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+              {currentContent.services.subtitle}
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Partnership Acceleration */}
+            <Card className="border-2 border-blue-300 bg-blue-50/50">
+              <CardHeader>
+                <Badge className="w-fit bg-blue-100 text-blue-800 hover:bg-blue-100">TRACK 1</Badge>
+                <CardTitle className="text-2xl text-blue-900">{currentContent.services.partnership.title}</CardTitle>
+                <CardDescription className="text-blue-700 text-base">
+                  {currentContent.services.partnership.subtitle}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="bg-white p-4 rounded-lg border border-blue-200">
+                  <p className="text-sm text-blue-800"><strong>{language === 'es' ? 'Equity Range' : 'Equity Range'}:</strong> {currentContent.services.partnership.equity}</p>
+                  <p className="text-sm text-blue-800"><strong>{language === 'es' ? 'Tu Control' : 'Your Control'}:</strong> {currentContent.services.partnership.control}</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Acquisition Acceleration */}
+            <Card className="border-2 border-purple-300 bg-purple-50/50">
+              <CardHeader>
+                <Badge className="w-fit bg-purple-100 text-purple-800 hover:bg-purple-100">TRACK 2</Badge>
+                <CardTitle className="text-2xl text-purple-900">{currentContent.services.acquisition.title}</CardTitle>
+                <CardDescription className="text-purple-700 text-base">
+                  {currentContent.services.acquisition.subtitle}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="bg-white p-4 rounded-lg border border-purple-200">
+                  <p className="text-sm text-purple-800"><strong>{language === 'es' ? 'Equity Range' : 'Equity Range'}:</strong> {currentContent.services.acquisition.equity}</p>
+                  <p className="text-sm text-purple-800"><strong>{language === 'es' ? 'Nuestro Compromiso' : 'Our Commitment'}:</strong> {currentContent.services.acquisition.commitment}</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
 
       {/* Leadership Section */}
       <section id="about" className="py-20 px-4 bg-white">
