@@ -45,7 +45,7 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
         opportunity: 'Oportunidad',
         methodology: 'Tesis',
         about: 'Nosotros',
-        contact: 'Contacto'
+        contact: 'Invertir'
       },
       
       // Hero Section
@@ -169,7 +169,7 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
         opportunity: 'Opportunity',
         methodology: 'Thesis',
         about: 'About',
-        contact: 'Contact'
+        contact: 'Invest'
       },
 
       // Hero Section
@@ -543,7 +543,7 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
             <CardHeader className="text-center flex flex-col items-center">
               <div className="w-28 h-28 rounded-full overflow-hidden bg-gray-200 mb-6 shadow-none">
                 <img 
-                  src="/Santiago Sáenz Ariza.png" 
+                  src="/Santiago Saenz Ariza.png" 
                   alt="Santiago Sáenz Ariza" 
                   className="object-cover w-full h-full rounded-full border border-gray-200"
                   width={112}
@@ -554,72 +554,59 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
               <CardDescription className="text-lg text-black font-medium font-mono opacity-80 mb-2">
                 {currentContent.about.role}
               </CardDescription>
+              <div className="flex flex-col items-center gap-2 mb-2 mt-8">
+  <a href="mailto:santiago@ferrix.ventures.com" className="hover:underline text-black font-mono text-sm mb-1">santiago@ferrix.ventures.com</a>
+  <a href="https://www.linkedin.com/in/santiagosaenzariza/" target="_blank" rel="noopener noreferrer" className="hover:underline text-blue-700 font-mono text-sm">LinkedIn</a>
+</div>
             </CardHeader>
             <CardContent>
-              <blockquote className="bg-black/90 p-8 rounded-xl">
-                <p className="text-white italic text-lg leading-relaxed font-light text-center">
-                  {currentContent.about.vision}
-                </p>
-              </blockquote>
             </CardContent>
           </Card>
+            {/* Recruiting CTA Card */}
+            <Card className="glass-card border border-gray-100 bg-white/80 backdrop-blur-lg rounded-2xl mt-8 animate-scale-in">
+              <CardHeader className="text-center flex flex-col items-center">
+                <CardTitle className="text-2xl text-black font-mono font-extrabold mb-2">Join Our AI Talent Network</CardTitle>
+                <CardDescription className="text-base text-black font-mono opacity-80 mb-4">
+                  Help us build the future of venture acceleration. We’re looking for AI engineers, operators, and digital builders.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <a href="https://wa.me/14242160643" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full bg-black text-white hover:bg-gray-800 font-mono text-lg">Join Us</Button>
+                </a>
+              </CardContent>
+            </Card>
         </div>
       </section>
 
       {/* CTA Section */}
       <section id="contact" className="py-24 px-6 bg-black">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight animate-slide-up">
-              {currentContent.cta.title}
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-white futuristic-border animate-scale-in stagger-1 hover:shadow-xl transition-all duration-500">
-              <CardHeader>
-                <CardTitle className="text-xl text-black font-mono">{currentContent.cta.entrepreneurs}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground text-sm font-mono">{currentContent.cta.entrepreneursDesc}</p>
-                <a href="https://wa.me/14242160643" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-black text-white hover:bg-gray-800 font-mono text-sm">
-                    Apply
-                  </Button>
-                </a>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white futuristic-border animate-scale-in stagger-2 hover:shadow-xl transition-all duration-500">
-              <CardHeader>
-                <CardTitle className="text-xl text-black font-mono">{currentContent.cta.investors}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground text-sm font-mono">{currentContent.cta.investorsDesc}</p>
-                <a href="https://wa.me/14242160643" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-black text-white hover:bg-gray-800 font-mono text-sm">
-                    Learn More
-                  </Button>
-                </a>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white futuristic-border animate-scale-in stagger-3 hover:shadow-xl transition-all duration-500">
-              <CardHeader>
-                <CardTitle className="text-xl text-black font-mono">{currentContent.cta.talent}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground text-sm font-mono">{currentContent.cta.talentDesc}</p>
-                <a href="https://wa.me/14242160643" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-black text-white hover:bg-gray-800 font-mono text-sm">
-                    Join Us
-                  </Button>
-                </a>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+  <div className="container mx-auto max-w-4xl">
+    <div className="text-center mb-12">
+      <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight animate-slide-up">
+        Be Part of the<br />Next Asset Class
+      </h2>
+      <p className="text-lg md:text-xl text-gray-300 font-light max-w-2xl mx-auto">
+        Join our fund and be part of the next wave of AI-powered value creation in proven businesses. Diversify your portfolio and join a select group of forward-thinking investors.
+      </p>
+    </div>
+    <div className="flex justify-center">
+      <Card className="bg-white futuristic-border animate-scale-in hover:shadow-xl transition-all duration-500 w-full max-w-[28rem] pt-8 pb-4 px-6">
+        
+        <CardContent className="space-y-4">
+          <p className="text-muted-foreground text-base font-mono">
+            Access a differentiated investment opportunity: AI-powered acceleration of established, cash-flowing companies.
+          </p>
+          <a href="https://wa.me/14242160643" target="_blank" rel="noopener noreferrer" className="block mt-6">
+            <Button className="w-full bg-black text-white hover:bg-gray-800 font-mono text-lg">
+              Learn how to invest
+            </Button>
+          </a>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>
 
       {/* Footer */}
       <footer className="py-8 px-6 bg-white border-t border-gray-200">
