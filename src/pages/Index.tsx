@@ -355,14 +355,16 @@ const Index = () => {
               {currentContent.hero.subheadline}
             </p>
           </div>
-          <div className="animate-slide-up stagger-2">
-            <Button 
-              size="lg" 
-              className="bg-black text-white hover:bg-gray-800 px-8 py-4 text-lg font-mono transition-all duration-300 hover:scale-105"
-            >
-              {currentContent.hero.cta}
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+          <div className="animate-slide-up stagger-2 flex justify-center">
+            <a href="#redefining" className="group">
+              <Button 
+                size="lg" 
+                className="bg-black text-white hover:bg-gray-800 px-8 py-4 text-lg font-mono transition-all duration-300 hover:scale-105 flex items-center"
+              >
+                Our Thesis
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </Button>
+            </a>
           </div>
         </div>
         
@@ -374,91 +376,73 @@ const Index = () => {
 
       {/* Opportunity Section */}
       <section id="opportunity" className="py-24 px-6 bg-white">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-20 animate-slide-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6 tracking-tight">
-              {currentContent.opportunity.title}
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light">
-              {currentContent.opportunity.subtitle}
+        <div className="container mx-auto max-w-5xl px-4 md:px-12 lg:px-24">
+          <div className="text-center mb-16 animate-slide-up">
+            <h2 className="text-5xl font-extrabold text-black mb-4 tracking-tight">The $12T Opportunity</h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto font-light mb-0">
+              358M established, profitable businesses are waiting for exponential acceleration—while VC chases 500K high-risk startups.
             </p>
           </div>
 
-          {/* Market Context */}
-          <div className="max-w-4xl mx-auto mb-20 animate-slide-up stagger-1">
-            <Card className="glass-card border border-gray-200">
-              <CardHeader>
-                <CardTitle className="text-2xl text-black font-mono text-center">{currentContent.opportunity.context.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <p className="text-muted-foreground leading-relaxed font-light">{currentContent.opportunity.context.description}</p>
-                <div className="bg-yellow-50 p-6 rounded-lg border border-yellow-200">
-                  <p className="text-black font-medium leading-relaxed">{currentContent.opportunity.context.marketGap}</p>
-                </div>
-                <p className="text-muted-foreground leading-relaxed font-light">{currentContent.opportunity.context.timing}</p>
-              </CardContent>
-            </Card>
+        </div>
+
+        {/* Key Statistics */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mt-20 px-2 md:px-10 lg:px-24 xl:px-40">
+          {Object.entries(currentContent.opportunity.stats).map(([key, stat], index) => {
+            const s = stat as { number: string; label: string; desc: string };
+            return (
+              <Card key={key} className="futuristic-border text-center animate-scale-in stagger-1 hover:shadow-2xl transition-all duration-500 bg-white/90 border border-gray-100">
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-4xl font-extrabold text-black font-mono mb-2 tracking-tight">{s.number}</CardTitle>
+                  <CardDescription className="text-black font-semibold text-sm uppercase tracking-widest opacity-80">{s.label}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-xs text-muted-foreground font-mono leading-relaxed opacity-75">{s.desc}</p>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+
+        {/* Market Context - Integrated */}
+        <div className="mt-20 mb-4 flex flex-col items-center text-center px-2 md:px-10 lg:px-32 xl:px-56">
+          <h3 className="text-3xl md:text-5xl font-extrabold text-black mb-6 tracking-tight leading-tight">
+            The Market VC Ignores
+          </h3>
+          <p className="text-lg md:text-2xl text-black font-bold mb-4 max-w-3xl">
+            Venture capital flows to risky startups, ignoring the world’s largest pool of proven, cash-flowing companies.
+          </p>
+        </div>
+      </section>
+
+      {/* Redefining Venture Acceleration Section */}
+      <section id="redefining" className="py-24 px-6 bg-gray-50">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16 animate-slide-up">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6 tracking-tight">
+              Redefining Venture Acceleration
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto font-light">
+              Traditional venture studios build companies from scratch with 90% failure probability. Private equity funds optimize financially but don't transform technologically. There's a massive opportunity between these two extremes.
+            </p>
           </div>
-
-          {/* Key Statistics */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-            {Object.entries(currentContent.opportunity.stats).map(([key, stat], index) => {
-              const s = stat as { number: string; label: string; desc: string };
-              return (
-                <Card key={key} className={`futuristic-border text-center animate-scale-in stagger-${index + 1} hover:shadow-lg transition-all duration-500`}>
-                  <CardHeader className="pb-4">
-                    <CardTitle className="text-4xl font-bold text-black font-mono mb-2">{s.number}</CardTitle>
-                    <CardDescription className="text-black font-semibold text-sm uppercase tracking-wide">{s.label}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-xs text-muted-foreground font-mono leading-relaxed">{s.desc}</p>
-                  </CardContent>
-                </Card>
-              );
-            })}
+          <div className="grid md:grid-cols-3 gap-10">
+            <div className="bg-white rounded-xl border border-gray-200 shadow-sm flex flex-col items-center justify-center p-10 text-center transition-all">
+              <div className="text-2xl md:text-3xl font-extrabold text-black mb-2">AI-First</div>
+              <div className="text-lg md:text-xl font-bold uppercase text-black mb-4 tracking-wide">Acceleration Studio</div>
+              <div className="text-base text-muted-foreground font-mono">We accelerate existing ventures with AI and advanced tech stacks, we don't build new companies</div>
+            </div>
+            <div className="bg-white rounded-xl border border-gray-200 shadow-sm flex flex-col items-center justify-center p-10 text-center transition-all">
+              <div className="text-2xl md:text-3xl font-extrabold text-black mb-2">Strategic</div>
+              <div className="text-lg md:text-xl font-bold uppercase text-black mb-4 tracking-wide">Capital Deployment</div>
+              <div className="text-base text-muted-foreground font-mono">We deploy capital to accelerate growth, not to validate product-market fit</div>
+            </div>
+            <div className="bg-white rounded-xl border border-gray-200 shadow-sm flex flex-col items-center justify-center p-10 text-center transition-all">
+              <div className="text-2xl md:text-3xl font-extrabold text-black mb-2">Systematic</div>
+              <div className="text-lg md:text-xl font-bold uppercase text-black mb-4 tracking-wide">Acceleration Platform</div>
+              <div className="text-base text-muted-foreground font-mono">Proven methodologies that accelerate ventures predictably and scalably</div>
+            </div>
           </div>
-
-          {/* Key Insight */}
-          <Card className="max-w-4xl mx-auto glass-card border-2 border-black animate-slide-up stagger-4 mb-20">
-            <CardHeader>
-              <CardTitle className="text-2xl text-black text-center font-mono">{currentContent.opportunity.insight.title}</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-red-50 p-6 rounded-lg border border-red-200">
-                  <h4 className="font-bold text-black mb-2 text-sm font-mono">PROBLEM</h4>
-                  <p className="text-xs text-muted-foreground font-mono">{currentContent.opportunity.insight.problem}</p>
-                </div>
-
-                <div className="bg-green-50 p-6 rounded-lg border border-green-200">
-                  <h4 className="font-bold text-black mb-2 text-sm font-mono">SOLUTION</h4>
-                  <p className="text-xs text-black font-mono">{currentContent.opportunity.insight.solution}</p>
-                </div>
-
-                <div className="bg-black p-6 rounded-lg">
-                  <h4 className="font-bold text-white mb-2 text-sm font-mono">ADVANTAGE</h4>
-                  <p className="text-xs text-white font-mono">{currentContent.opportunity.insight.advantage}</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Why Now */}
-          <Card className="max-w-4xl mx-auto glass-card border border-gray-200 animate-slide-up stagger-5">
-            <CardHeader>
-              <CardTitle className="text-2xl text-black text-center font-mono">{currentContent.opportunity.whyNow.title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid md:grid-cols-2 gap-4">
-                {currentContent.opportunity.whyNow.reasons.map((reason, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-sm text-muted-foreground font-mono">{reason}</p>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </section>
 
@@ -519,18 +503,24 @@ const Index = () => {
             </h2>
           </div>
 
-          <Card className="glass-card border-2 border-black animate-scale-in">
-            <CardHeader className="text-center">
-              <div className="w-24 h-24 bg-black rounded-full flex items-center justify-center mx-auto mb-6 float-animation">
-                <Users className="h-12 w-12 text-white" />
+          <Card className="glass-card border border-gray-100 bg-white/80 backdrop-blur-lg rounded-2xl animate-scale-in">
+            <CardHeader className="text-center flex flex-col items-center">
+              <div className="w-28 h-28 rounded-full overflow-hidden bg-gray-200 mb-6 shadow-none">
+                <img 
+                  src="/Santiago Sáenz Ariza.png" 
+                  alt="Santiago Sáenz Ariza" 
+                  className="object-cover w-full h-full rounded-full border border-gray-200"
+                  width={112}
+                  height={112}
+                />
               </div>
-              <CardTitle className="text-3xl text-black font-mono">{currentContent.leadership.founder}</CardTitle>
-              <CardDescription className="text-lg text-black font-medium font-mono">
+              <CardTitle className="text-3xl text-black font-mono font-extrabold mb-2">{currentContent.leadership.founder}</CardTitle>
+              <CardDescription className="text-lg text-black font-medium font-mono opacity-80 mb-2">
                 {currentContent.leadership.role}
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <blockquote className="bg-black p-8 rounded-lg">
+              <blockquote className="bg-black/90 p-8 rounded-xl">
                 <p className="text-white italic text-lg leading-relaxed font-light text-center">
                   {currentContent.leadership.vision}
                 </p>
@@ -599,7 +589,6 @@ const Index = () => {
       <footer className="py-8 px-6 bg-white border-t border-gray-200">
         <div className="container mx-auto max-w-6xl text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <img src="/Logos - 1080x1080 - FRX.png" alt="FRX" className="w-6 h-6" />
             <span className="font-bold text-black font-mono">FERRIX VENTURES</span>
           </div>
           <p className="text-xs text-muted-foreground font-mono">
