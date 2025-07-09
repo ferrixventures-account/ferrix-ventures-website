@@ -51,7 +51,7 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
       // Hero Section
       hero: {
         headline: 'AI-First Venture Acceleration Studio',
-        subheadline: 'Transformamos ventures establecidos en líderes digitales exponenciales.',
+        subheadline: 'Transformamos negocios tradicionales en líderes digitales con crecimiento exponencial.',
         cta: 'Explorar Metodología'
       },
 
