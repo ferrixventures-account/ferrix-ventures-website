@@ -614,9 +614,11 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
           <div className="flex items-center justify-center space-x-2 mb-4">
             <span className="font-bold text-black font-mono">FERRIX VENTURES</span>
           </div>
-          <p className="text-xs text-muted-foreground font-mono">
-            AI-First Venture Acceleration Studio
-          </p>
+          <div className="flex flex-col items-center gap-2 mb-4">
+            <a href="https://www.linkedin.com/company/ferrix/" target="_blank" rel="noopener noreferrer" className="hover:underline text-blue-700 font-mono text-sm">LinkedIn</a>
+            <a href="mailto:Hello@ferrix.ventures" className="hover:underline text-black font-mono text-sm">Hello@ferrix.ventures</a>
+          </div>
+          
           <p className="text-xs text-muted-foreground mt-2 font-mono">
             © 2025 Ferrix Ventures. All rights reserved.
           </p>
