@@ -27,7 +27,7 @@ const Index = () => {
         blog: 'Blog',
         contact: 'Contacto'
       },
-      cta: 'Conoce Nuestra Metodología',
+      headerCta: 'Conoce Nuestra Metodología',
       
       // Hero Section
       hero: {
@@ -168,7 +168,7 @@ const Index = () => {
         blog: 'Blog',
         contact: 'Contact'
       },
-      cta: 'Learn More',
+      headerCta: 'Learn More',
 
       // Hero Section
       hero: {
@@ -339,7 +339,7 @@ const Index = () => {
               </button>
 
               <Button className="hidden md:inline-flex bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                {currentContent.cta}
+                {currentContent.headerCta}
               </Button>
 
               {/* Mobile Menu Toggle */}
@@ -363,7 +363,7 @@ const Index = () => {
                 <a href="#investors" className="text-gray-700 hover:text-blue-600 transition-colors">{currentContent.nav.investors}</a>
                 <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">{currentContent.nav.contact}</a>
                 <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                  {currentContent.cta}
+                  {currentContent.headerCta}
                 </Button>
               </nav>
             </div>
