@@ -5,8 +5,16 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { ArrowRight, Globe, TrendingUp, Zap, Users, Target, Star, CheckCircle, ExternalLink, Menu, X, BarChart3, DollarSign, Building2, ChevronDown } from 'lucide-react';
 
-const Index = () => {
-  const [language, setLanguage] = useState('en');
+import { useNavigate, useLocation } from "react-router-dom";
+
+interface IndexProps {
+  forcedLanguage?: string;
+}
+
+const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
+  const [language, setLanguage] = useState(forcedLanguage || 'en');
+  const navigate = useNavigate();
+  const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
 
@@ -16,9 +24,19 @@ const Index = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Sync language with forcedLanguage prop
+  useEffect(() => {
+    if (forcedLanguage && forcedLanguage !== language) {
+      setLanguage(forcedLanguage);
+    }
+  }, [forcedLanguage]);
+
   const toggleLanguage = () => {
-    setLanguage(language === 'es' ? 'en' : 'es');
+    const newLang = language === 'es' ? 'en' : 'es';
+    setLanguage(newLang);
+    navigate(newLang === 'es' ? '/es' : '/');
   };
+
 
   const content = {
     es: {
