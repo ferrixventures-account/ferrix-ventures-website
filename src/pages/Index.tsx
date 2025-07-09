@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -75,59 +74,13 @@ const Index = () => {
           title: 'PARTNERSHIP ACCELERATION',
           subtitle: 'Aceleración AI-powered manteniendo tu control mayoritario',
           equity: '0% a 50% equity stakes',
-          control: 'Siempre mantienes 50%+ ownership y control operacional',
-          tiers: {
-            catalyst: {
-              name: 'CATALYST ACCELERATION',
-              desc: 'Aceleración de fundación digital con IA para ventures LATAM',
-              equity: '0% (pure fee-for-service)',
-              investment: '$8,000 USD',
-              duration: '6 semanas'
-            },
-            growth: {
-              name: 'GROWTH ACCELERATION', 
-              desc: 'Expansión regional con AI-powered marketing automation',
-              equity: '10-20% OR pure fee ($35,000)',
-              investment: '$18,000 USD + equity',
-              duration: '4 meses'
-            },
-            market: {
-              name: 'MARKET LEADERSHIP ACCELERATION',
-              desc: 'US market entry con advanced AI positioning',
-              equity: '15-25% OR pure fee ($40,000)',
-              investment: '$25,000 USD + equity', 
-              duration: '8 semanas'
-            },
-            strategic: {
-              name: 'STRATEGIC ACCELERATION PARTNERSHIP',
-              desc: 'Deep AI-first partnership para exponential acceleration',
-              equity: '25-50% (always retain majority control)',
-              investment: '$100k-500k growth capital',
-              duration: '12-18 meses'
-            }
-          }
+          control: 'Siempre mantienes 50%+ ownership y control operacional'
         },
         acquisition: {
           title: 'ACQUISITION ACCELERATION',
           subtitle: 'Full acquisition con maximum AI-powered acceleration',
           equity: '50% a 100% acquisition',
-          commitment: 'Maximum AI deployment y acceleration resources',
-          types: {
-            majority: {
-              name: 'MAJORITY ACQUISITION (50-80%)',
-              desc: 'Become majority owners con tu continued involvement',
-              stake: '20-50% retained ownership',
-              investment: '$250k-2M+ acquisition y growth capital',
-              duration: '24-36 months to AI-optimized exit'
-            },
-            full: {
-              name: 'FULL ACQUISITION (80-100%)',
-              desc: 'Complete acquisition con maximum AI acceleration deployment',
-              stake: '0-20% retained (optional)',
-              investment: '$500k-5M+ acquisition y growth capital',
-              duration: '18-36 months to strategic exit'
-            }
-          }
+          commitment: 'Maximum AI deployment y acceleration resources'
         }
       },
 
@@ -216,59 +169,13 @@ const Index = () => {
           title: 'PARTNERSHIP ACCELERATION',
           subtitle: 'AI-powered acceleration while maintaining your majority control',
           equity: '0% to 50% equity stakes',
-          control: 'You always retain 50%+ ownership and operational control',
-          tiers: {
-            catalyst: {
-              name: 'CATALYST ACCELERATION',
-              desc: 'Digital foundation acceleration with AI for LATAM ventures',
-              equity: '0% (pure fee-for-service)',
-              investment: '$8,000 USD',
-              duration: '6 weeks'
-            },
-            growth: {
-              name: 'GROWTH ACCELERATION',
-              desc: 'Regional expansion with AI-powered marketing automation',
-              equity: '10-20% OR pure fee ($35,000)',
-              investment: '$18,000 USD + equity',
-              duration: '4 months'
-            },
-            market: {
-              name: 'MARKET LEADERSHIP ACCELERATION',
-              desc: 'US market entry with advanced AI positioning',
-              equity: '15-25% OR pure fee ($40,000)',
-              investment: '$25,000 USD + equity',
-              duration: '8 weeks'
-            },
-            strategic: {
-              name: 'STRATEGIC ACCELERATION PARTNERSHIP',
-              desc: 'Deep AI-first partnership for exponential acceleration',
-              equity: '25-50% (always retain majority control)',
-              investment: '$100k-500k growth capital',
-              duration: '12-18 months'
-            }
-          }
+          control: 'You always retain 50%+ ownership and operational control'
         },
         acquisition: {
           title: 'ACQUISITION ACCELERATION',
           subtitle: 'Full acquisition with maximum AI-powered acceleration',
           equity: '50% to 100% acquisition',
-          commitment: 'Maximum AI deployment and acceleration resources',
-          types: {
-            majority: {
-              name: 'MAJORITY ACQUISITION (50-80%)',
-              desc: 'Become majority owners with your continued involvement',
-              stake: '20-50% retained ownership',
-              investment: '$250k-2M+ acquisition and growth capital',
-              duration: '24-36 months to AI-optimized exit'
-            },
-            full: {
-              name: 'FULL ACQUISITION (80-100%)',
-              desc: 'Complete acquisition with maximum AI acceleration deployment',
-              stake: '0-20% retained (optional)',
-              investment: '$500k-5M+ acquisition and growth capital',
-              duration: '18-36 months to strategic exit'
-            }
-          }
+          commitment: 'Maximum AI deployment and acceleration resources'
         }
       },
 
@@ -303,49 +210,56 @@ const Index = () => {
   const currentContent = content[language];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
+      <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <Zap className="h-6 w-6 text-white" />
+            <div className="flex items-center space-x-3">
+              <div className="w-8 h-8 bg-black rounded-sm flex items-center justify-center">
+                <Zap className="h-5 w-5 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-900">Ferrix Ventures</h1>
-                <p className="text-xs text-gray-600">AI-First Venture Acceleration Studio</p>
+                <h1 className="text-xl font-semibold text-black">Ferrix Ventures</h1>
+                <p className="text-xs text-muted-foreground">AI-First Venture Acceleration Studio</p>
               </div>
             </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-gray-700 hover:text-blue-600 transition-colors">{currentContent.nav.home}</a>
-              <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors">{currentContent.nav.partnership}</a>
-              <a href="#acquisition" className="text-gray-700 hover:text-blue-600 transition-colors">{currentContent.nav.acquisition}</a>
-              <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">{currentContent.nav.about}</a>
-              <a href="#investors" className="text-gray-700 hover:text-blue-600 transition-colors">{currentContent.nav.investors}</a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">{currentContent.nav.contact}</a>
+              <a href="#home" className="text-muted-foreground hover:text-black transition-colors font-medium">{currentContent.nav.home}</a>
+              <a href="#services" className="text-muted-foreground hover:text-black transition-colors font-medium">{currentContent.nav.partnership}</a>
+              <a href="#acquisition" className="text-muted-foreground hover:text-black transition-colors font-medium">{currentContent.nav.acquisition}</a>
+              <a href="#about" className="text-muted-foreground hover:text-black transition-colors font-medium">{currentContent.nav.about}</a>
+              <a href="#investors" className="text-muted-foreground hover:text-black transition-colors font-medium">{currentContent.nav.investors}</a>
+              <a href="#contact" className="text-muted-foreground hover:text-black transition-colors font-medium">{currentContent.nav.contact}</a>
             </nav>
 
-            <div className="flex items-center space-x-4">
-              {/* Language Toggle */}
-              <button 
+            {/* Language Toggle & CTA */}
+            <div className="hidden md:flex items-center space-x-4">
+              <button
                 onClick={toggleLanguage}
-                className="flex items-center space-x-2 px-3 py-2 rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors"
+                className="text-sm px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 transition-colors"
               >
-                <Globe className="h-4 w-4" />
-                <span className="text-sm font-medium">{language === 'es' ? '🇪🇸 ES' : '🇺🇸 EN'}</span>
+                {language === 'es' ? '🇺🇸 EN' : '🇪🇸 ES'}
               </button>
-
-              <Button className="hidden md:inline-flex bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+              
+              <Button className="bg-black text-white hover:bg-gray-800 border border-black">
                 {currentContent.headerCta}
               </Button>
+            </div>
 
-              {/* Mobile Menu Toggle */}
-              <button 
+            {/* Mobile Menu Toggle */}
+            <div className="md:hidden flex items-center space-x-2">
+              <button
+                onClick={toggleLanguage}
+                className="text-sm px-2 py-1 border border-gray-300 rounded"
+              >
+                {language === 'es' ? 'EN' : 'ES'}
+              </button>
+              <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                className="p-2"
               >
                 {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
@@ -354,73 +268,80 @@ const Index = () => {
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
-            <div className="md:hidden mt-4 pt-4 border-t border-gray-200">
-              <nav className="flex flex-col space-y-4">
-                <a href="#home" className="text-gray-700 hover:text-blue-600 transition-colors">{currentContent.nav.home}</a>
-                <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors">{currentContent.nav.partnership}</a>
-                <a href="#acquisition" className="text-gray-700 hover:text-blue-600 transition-colors">{currentContent.nav.acquisition}</a>
-                <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">{currentContent.nav.about}</a>
-                <a href="#investors" className="text-gray-700 hover:text-blue-600 transition-colors">{currentContent.nav.investors}</a>
-                <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">{currentContent.nav.contact}</a>
-                <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+            <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 py-4 px-4 space-y-4">
+              <a href="#home" className="block text-muted-foreground hover:text-black font-medium">{currentContent.nav.home}</a>
+              <a href="#services" className="block text-muted-foreground hover:text-black font-medium">{currentContent.nav.partnership}</a>
+              <a href="#acquisition" className="block text-muted-foreground hover:text-black font-medium">{currentContent.nav.acquisition}</a>
+              <a href="#about" className="block text-muted-foreground hover:text-black font-medium">{currentContent.nav.about}</a>
+              <a href="#investors" className="block text-muted-foreground hover:text-black font-medium">{currentContent.nav.investors}</a>
+              <a href="#contact" className="block text-muted-foreground hover:text-black font-medium">{currentContent.nav.contact}</a>
+              <div className="pt-4 border-t border-gray-200">
+                <Button className="w-full bg-black text-white hover:bg-gray-800">
                   {currentContent.headerCta}
                 </Button>
-              </nav>
+              </div>
             </div>
           )}
         </div>
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="py-20 px-4">
+      <section id="home" className="py-20 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-black mb-8 leading-tight">
               {currentContent.hero.headline}
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto mb-12 leading-relaxed">
               {currentContent.hero.subheadline}
             </p>
 
-            {/* Key Distinction Box */}
-            <Card className="mb-8 max-w-4xl mx-auto border-2 border-blue-200 bg-blue-50/50">
+            {/* Key Distinction */}
+            <Card className="max-w-4xl mx-auto mb-12 border-2 border-black">
               <CardHeader>
-                <CardTitle className="text-lg text-blue-900 flex items-center justify-center">
-                  <Target className="h-5 w-5 mr-2" />
-                  {currentContent.hero.distinction.title}
+                <CardTitle className="text-xl text-black flex items-center justify-center">
+                  <span className="mr-2">💡</span> {currentContent.hero.distinction.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="flex items-center text-red-700">
-                  <X className="h-4 w-4 mr-2 text-red-500" />
-                  <span className="text-sm">{currentContent.hero.distinction.traditional}</span>
+              <CardContent className="space-y-4 text-left">
+                <div className="flex items-start space-x-3">
+                  <span className="text-black font-semibold">❌</span>
+                  <p className="text-muted-foreground">{currentContent.hero.distinction.traditional}</p>
                 </div>
-                <div className="flex items-center text-green-700">
-                  <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
-                  <span className="text-sm">{currentContent.hero.distinction.ferrix}</span>
+                <div className="flex items-start space-x-3">
+                  <span className="text-black font-semibold">✅</span>
+                  <p className="text-black">{currentContent.hero.distinction.ferrix}</p>
                 </div>
-                <div className="flex items-center text-red-700">
-                  <X className="h-4 w-4 mr-2 text-red-500" />
-                  <span className="text-sm">{currentContent.hero.distinction.risk}</span>
+                <Separator className="my-4" />
+                <div className="flex items-start space-x-3">
+                  <span className="text-black font-semibold">❌</span>
+                  <p className="text-muted-foreground">{currentContent.hero.distinction.risk}</p>
                 </div>
-                <div className="flex items-center text-green-700">
-                  <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
-                  <span className="text-sm">{currentContent.hero.distinction.advantage}</span>
+                <div className="flex items-start space-x-3">
+                  <span className="text-black font-semibold">✅</span>
+                  <p className="text-black">{currentContent.hero.distinction.advantage}</p>
                 </div>
               </CardContent>
             </Card>
 
-            <p className="text-lg text-gray-700 mb-8 italic max-w-3xl mx-auto">
-              {currentContent.hero.vision}
-            </p>
+            {/* Vision Statement */}
+            <Card className="max-w-4xl mx-auto mb-12 border border-gray-200">
+              <CardContent className="p-6">
+                <p className="text-lg text-muted-foreground italic leading-relaxed">
+                  {currentContent.hero.vision}
+                </p>
+              </CardContent>
+            </Card>
 
+            {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-3">
+              <Button size="lg" className="bg-black text-white hover:bg-gray-800 px-8 py-4">
                 {currentContent.hero.primaryCta}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-3 border-blue-300 hover:bg-blue-50">
+              <Button size="lg" variant="outline" className="border-black text-black hover:bg-gray-50 px-8 py-4">
                 {currentContent.hero.secondaryCta}
+                <ExternalLink className="ml-2 h-5 w-5" />
               </Button>
             </div>
           </div>
@@ -428,52 +349,73 @@ const Index = () => {
       </section>
 
       {/* Vision Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-gray-50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
               {currentContent.vision.title}
             </h2>
-            <div className="max-w-4xl mx-auto space-y-6 text-lg text-gray-700">
-              <p className="font-semibold text-red-600">{currentContent.vision.marketGap}</p>
-              <p className="text-blue-600 font-semibold">{currentContent.vision.innovation}</p>
-            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 mb-16">
+            <Card className="border border-gray-200">
+              <CardHeader>
+                <CardTitle className="text-xl text-black">{language === 'es' ? 'La Oportunidad de Mercado' : 'The Market Gap'}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed">{currentContent.vision.marketGap}</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-black">
+              <CardHeader>
+                <CardTitle className="text-xl text-black">{language === 'es' ? 'Nuestra Innovación: AI-First Venture Acceleration' : 'Our Innovation: AI-First Venture Acceleration'}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-black leading-relaxed">{currentContent.vision.innovation}</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Three Pillars */}
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-black mb-8">{currentContent.vision.pillars.title}</h3>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-2 border-blue-200 hover:border-blue-300 transition-colors">
+            <Card className="border border-gray-200 hover:border-black transition-colors">
               <CardHeader>
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-black rounded-sm flex items-center justify-center mb-4">
                   <Zap className="h-6 w-6 text-white" />
                 </div>
-                <CardTitle className="text-blue-900">{currentContent.vision.pillars.studio.title}</CardTitle>
+                <CardTitle className="text-black">{currentContent.vision.pillars.studio.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">{currentContent.vision.pillars.studio.desc}</p>
+                <p className="text-muted-foreground">{currentContent.vision.pillars.studio.desc}</p>
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-green-200 hover:border-green-300 transition-colors">
+            <Card className="border border-gray-200 hover:border-black transition-colors">
               <CardHeader>
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-black rounded-sm flex items-center justify-center mb-4">
                   <TrendingUp className="h-6 w-6 text-white" />
                 </div>
-                <CardTitle className="text-green-900">{currentContent.vision.pillars.capital.title}</CardTitle>
+                <CardTitle className="text-black">{currentContent.vision.pillars.capital.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">{currentContent.vision.pillars.capital.desc}</p>
+                <p className="text-muted-foreground">{currentContent.vision.pillars.capital.desc}</p>
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-purple-200 hover:border-purple-300 transition-colors">
+            <Card className="border border-gray-200 hover:border-black transition-colors">
               <CardHeader>
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-black rounded-sm flex items-center justify-center mb-4">
                   <Target className="h-6 w-6 text-white" />
                 </div>
-                <CardTitle className="text-purple-900">{currentContent.vision.pillars.platform.title}</CardTitle>
+                <CardTitle className="text-black">{currentContent.vision.pillars.platform.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">{currentContent.vision.pillars.platform.desc}</p>
+                <p className="text-muted-foreground">{currentContent.vision.pillars.platform.desc}</p>
               </CardContent>
             </Card>
           </div>
@@ -481,48 +423,48 @@ const Index = () => {
       </section>
 
       {/* Service Portfolio Section */}
-      <section id="services" className="py-20 px-4 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section id="services" className="py-20 px-4 bg-white">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
               {currentContent.services.title}
             </h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
               {currentContent.services.subtitle}
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Partnership Acceleration */}
-            <Card className="border-2 border-blue-300 bg-blue-50/50">
+            <Card className="border-2 border-black">
               <CardHeader>
-                <Badge className="w-fit bg-blue-100 text-blue-800 hover:bg-blue-100">TRACK 1</Badge>
-                <CardTitle className="text-2xl text-blue-900">{currentContent.services.partnership.title}</CardTitle>
-                <CardDescription className="text-blue-700 text-base">
+                <Badge className="w-fit bg-black text-white hover:bg-black">TRACK 1</Badge>
+                <CardTitle className="text-2xl text-black">{currentContent.services.partnership.title}</CardTitle>
+                <CardDescription className="text-muted-foreground text-base">
                   {currentContent.services.partnership.subtitle}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="bg-white p-4 rounded-lg border border-blue-200">
-                  <p className="text-sm text-blue-800"><strong>{language === 'es' ? 'Equity Range' : 'Equity Range'}:</strong> {currentContent.services.partnership.equity}</p>
-                  <p className="text-sm text-blue-800"><strong>{language === 'es' ? 'Tu Control' : 'Your Control'}:</strong> {currentContent.services.partnership.control}</p>
+                <div className="bg-gray-50 p-4 rounded border border-gray-200">
+                  <p className="text-sm text-black"><strong>{language === 'es' ? 'Equity Range' : 'Equity Range'}:</strong> {currentContent.services.partnership.equity}</p>
+                  <p className="text-sm text-black"><strong>{language === 'es' ? 'Tu Control' : 'Your Control'}:</strong> {currentContent.services.partnership.control}</p>
                 </div>
               </CardContent>
             </Card>
 
             {/* Acquisition Acceleration */}
-            <Card className="border-2 border-purple-300 bg-purple-50/50">
+            <Card className="border border-gray-200">
               <CardHeader>
-                <Badge className="w-fit bg-purple-100 text-purple-800 hover:bg-purple-100">TRACK 2</Badge>
-                <CardTitle className="text-2xl text-purple-900">{currentContent.services.acquisition.title}</CardTitle>
-                <CardDescription className="text-purple-700 text-base">
+                <Badge className="w-fit bg-gray-100 text-black hover:bg-gray-100">TRACK 2</Badge>
+                <CardTitle className="text-2xl text-black">{currentContent.services.acquisition.title}</CardTitle>
+                <CardDescription className="text-muted-foreground text-base">
                   {currentContent.services.acquisition.subtitle}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="bg-white p-4 rounded-lg border border-purple-200">
-                  <p className="text-sm text-purple-800"><strong>{language === 'es' ? 'Equity Range' : 'Equity Range'}:</strong> {currentContent.services.acquisition.equity}</p>
-                  <p className="text-sm text-purple-800"><strong>{language === 'es' ? 'Nuestro Compromiso' : 'Our Commitment'}:</strong> {currentContent.services.acquisition.commitment}</p>
+                <div className="bg-gray-50 p-4 rounded border border-gray-200">
+                  <p className="text-sm text-black"><strong>{language === 'es' ? 'Equity Range' : 'Equity Range'}:</strong> {currentContent.services.acquisition.equity}</p>
+                  <p className="text-sm text-black"><strong>{language === 'es' ? 'Nuestro Compromiso' : 'Our Commitment'}:</strong> {currentContent.services.acquisition.commitment}</p>
                 </div>
               </CardContent>
             </Card>
@@ -531,62 +473,62 @@ const Index = () => {
       </section>
 
       {/* Leadership Section */}
-      <section id="about" className="py-20 px-4 bg-white">
+      <section id="about" className="py-20 px-4 bg-gray-50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
               {currentContent.leadership.title}
             </h2>
           </div>
 
-          <Card className="max-w-4xl mx-auto border-2 border-blue-200">
+          <Card className="max-w-4xl mx-auto border-2 border-black">
             <CardHeader className="text-center">
-              <div className="w-24 h-24 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-24 h-24 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="h-12 w-12 text-white" />
               </div>
-              <CardTitle className="text-2xl text-gray-900">{currentContent.leadership.founder}</CardTitle>
-              <CardDescription className="text-lg text-blue-600 font-medium">
+              <CardTitle className="text-2xl text-black">{currentContent.leadership.founder}</CardTitle>
+              <CardDescription className="text-lg text-black font-medium">
                 {currentContent.leadership.subtitle}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="bg-blue-50 p-6 rounded-lg">
-                <h4 className="font-semibold text-blue-900 mb-3">{language === 'es' ? 'Por Qué Santiago Creó Venture Acceleration' : 'Why Santiago Created Venture Acceleration'}:</h4>
-                <p className="text-blue-800">{currentContent.leadership.why}</p>
+              <div className="bg-gray-50 p-6 rounded border border-gray-200">
+                <h4 className="font-semibold text-black mb-3">{language === 'es' ? 'Por Qué Santiago Creó Venture Acceleration' : 'Why Santiago Created Venture Acceleration'}:</h4>
+                <p className="text-muted-foreground">{currentContent.leadership.why}</p>
               </div>
 
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-3">{language === 'es' ? 'Background' : 'Background'}:</h4>
-                <ul className="space-y-2 text-gray-700">
+              <div className="bg-white p-6 rounded border border-gray-200">
+                <h4 className="font-semibold text-black mb-3">{language === 'es' ? 'Background' : 'Background'}:</h4>
+                <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                    <CheckCircle className="h-4 w-4 text-black mr-2" />
                     <span className="text-sm">🎓 Universidad de los Andes - Business Administration</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                    <CheckCircle className="h-4 w-4 text-black mr-2" />
                     <span className="text-sm">🚀 Co-Founder & CEO, Agua for Devs (AI platform, 280+ Fortune 500 users)</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                    <CheckCircle className="h-4 w-4 text-black mr-2" />
                     <span className="text-sm">💼 Ex-Interim Chief of Staff, Share Ventures ($50M fund)</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                    <CheckCircle className="h-4 w-4 text-black mr-2" />
                     <span className="text-sm">🏆 Makers Fellowship & The Founder School Alumni</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                    <CheckCircle className="h-4 w-4 text-black mr-2" />
                     <span className="text-sm">🌎 Silicon Valley operational experience + AI development</span>
                   </li>
                 </ul>
               </div>
 
-              <blockquote className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg border-l-4 border-blue-500">
-                <p className="text-gray-800 italic text-lg leading-relaxed">
+              <blockquote className="bg-black p-6 rounded border-l-4 border-black">
+                <p className="text-white italic text-lg leading-relaxed">
                   {currentContent.leadership.vision}
                 </p>
                 <footer className="mt-4 text-right">
-                  <cite className="text-blue-600 font-medium">- Santiago Sáenz Ariza</cite>
+                  <cite className="text-gray-300 font-medium">- Santiago Sáenz Ariza</cite>
                 </footer>
               </blockquote>
             </CardContent>
@@ -595,7 +537,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="py-20 px-4 bg-gradient-to-br from-blue-600 to-purple-700">
+      <section id="contact" className="py-20 px-4 bg-black">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -604,37 +546,37 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="bg-white/10 backdrop-blur-md border-white/20 text-white">
+            <Card className="bg-white border border-gray-200">
               <CardHeader>
-                <CardTitle className="text-xl text-white">{currentContent.cta.entrepreneurs}</CardTitle>
+                <CardTitle className="text-xl text-black">{currentContent.cta.entrepreneurs}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-white/90 text-sm">{currentContent.cta.entrepreneursDesc}</p>
-                <Button className="w-full bg-white text-blue-600 hover:bg-gray-100">
+                <p className="text-muted-foreground text-sm">{currentContent.cta.entrepreneursDesc}</p>
+                <Button className="w-full bg-black text-white hover:bg-gray-800">
                   {currentContent.cta.buttons.entrepreneurs}
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/10 backdrop-blur-md border-white/20 text-white">
+            <Card className="bg-white border border-gray-200">
               <CardHeader>
-                <CardTitle className="text-xl text-white">{currentContent.cta.investors}</CardTitle>
+                <CardTitle className="text-xl text-black">{currentContent.cta.investors}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-white/90 text-sm">{currentContent.cta.investorsDesc}</p>
-                <Button className="w-full bg-white text-purple-600 hover:bg-gray-100">
+                <p className="text-muted-foreground text-sm">{currentContent.cta.investorsDesc}</p>
+                <Button className="w-full bg-black text-white hover:bg-gray-800">
                   {currentContent.cta.buttons.investors}
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/10 backdrop-blur-md border-white/20 text-white">
+            <Card className="bg-white border border-gray-200">
               <CardHeader>
-                <CardTitle className="text-xl text-white">{currentContent.cta.talent}</CardTitle>
+                <CardTitle className="text-xl text-black">{currentContent.cta.talent}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-white/90 text-sm">{currentContent.cta.talentDesc}</p>
-                <Button className="w-full bg-white text-indigo-600 hover:bg-gray-100">
+                <p className="text-muted-foreground text-sm">{currentContent.cta.talentDesc}</p>
+                <Button className="w-full bg-black text-white hover:bg-gray-800">
                   {currentContent.cta.buttons.talent}
                 </Button>
               </CardContent>
@@ -642,13 +584,13 @@ const Index = () => {
           </div>
 
           <div className="text-center">
-            <Card className="max-w-4xl mx-auto bg-yellow-50 border-yellow-200">
+            <Card className="max-w-4xl mx-auto bg-white border border-gray-200">
               <CardContent className="p-6">
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-yellow-800 text-sm font-bold">💡</span>
+                  <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white text-sm font-bold">💡</span>
                   </div>
-                  <p className="text-yellow-800 text-sm leading-relaxed">
+                  <p className="text-black text-sm leading-relaxed">
                     <strong>{language === 'es' ? 'Distinción Importante' : 'Important Distinction'}:</strong> {currentContent.cta.note}
                   </p>
                 </div>
@@ -659,61 +601,20 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <Zap className="h-5 w-5 text-white" />
-                </div>
-                <span className="text-xl font-bold">Ferrix Ventures</span>
-              </div>
-              <p className="text-gray-400 text-sm">
-                {language === 'es' 
-                  ? 'El primer AI-first Venture Acceleration Studio de Latinoamérica'
-                  : "Latin America's first AI-first Venture Acceleration Studio"
-                }
-              </p>
+      <footer className="py-8 px-4 bg-white border-t border-gray-200">
+        <div className="container mx-auto max-w-6xl text-center">
+          <div className="flex items-center justify-center space-x-2 mb-4">
+            <div className="w-6 h-6 bg-black rounded-sm flex items-center justify-center">
+              <Zap className="h-4 w-4 text-white" />
             </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">{language === 'es' ? 'Servicios' : 'Services'}</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#services" className="hover:text-white transition-colors">Partnership Acceleration</a></li>
-                <li><a href="#services" className="hover:text-white transition-colors">Acquisition Acceleration</a></li>
-                <li><a href="#investors" className="hover:text-white transition-colors">{language === 'es' ? 'Fondo de Inversión' : 'Investment Fund'}</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">{language === 'es' ? 'Empresa' : 'Company'}</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#about" className="hover:text-white transition-colors">{language === 'es' ? 'Nosotros' : 'About'}</a></li>
-                <li><a href="#contact" className="hover:text-white transition-colors">{language === 'es' ? 'Contacto' : 'Contact'}</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">{language === 'es' ? 'Contacto' : 'Contact'}</h4>
-              <div className="space-y-2 text-sm text-gray-400">
-                <p>📧 {language === 'es' ? 'hola@ferrixventures.com' : 'hello@ferrixventures.com'}</p>
-                <p>📍 Bogotá, Colombia</p>
-                <p>🌎 {language === 'es' ? 'Sirviendo LATAM y Estados Unidos' : 'Serving LATAM & US'}</p>
-              </div>
-            </div>
+            <span className="font-semibold text-black">Ferrix Ventures</span>
           </div>
-          
-          <Separator className="my-8 bg-gray-700" />
-          
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-            <p>&copy; 2025 Ferrix Ventures. {language === 'es' ? 'Todos los derechos reservados.' : 'All rights reserved.'}</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-white transition-colors">{language === 'es' ? 'Privacidad' : 'Privacy'}</a>
-              <a href="#" className="hover:text-white transition-colors">{language === 'es' ? 'Términos' : 'Terms'}</a>
-            </div>
-          </div>
+          <p className="text-sm text-muted-foreground">
+            AI-First Venture Acceleration Studio
+          </p>
+          <p className="text-xs text-muted-foreground mt-2">
+            © 2024 Ferrix Ventures. All rights reserved.
+          </p>
         </div>
       </footer>
     </div>
