@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import { ArrowRight, Globe, TrendingUp, Zap, Users, Target, Star, CheckCircle, ExternalLink, Menu, X, BarChart3, DollarSign, Building2, ChevronDown } from 'lucide-react';
 
 const Index = () => {
-  const [language, setLanguage] = useState('es');
+  const [language, setLanguage] = useState('en');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
 
@@ -278,18 +278,12 @@ const Index = () => {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a href="#home" className="flex items-center space-x-3 group">
-              <div className="relative">
-                <img 
-                  src="/Logos - 1080x1080 - FRX.png" 
-                  alt="FRX" 
-                  className="w-10 h-10 transition-transform duration-300 group-hover:scale-110"
-                />
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-black tracking-tight">FERRIX</h1>
-                <p className="text-xs text-muted-foreground font-mono">VENTURES</p>
-              </div>
+            <a href="#home" className="flex items-center group">
+              <img 
+                src="/Logos - 281x132 - Ferrix Ventures.png" 
+                alt="Ferrix Ventures Logo" 
+                className="h-10 w-auto transition-transform duration-300 group-hover:scale-110"
+              />
             </a>
 
             {/* Desktop Navigation */}
@@ -408,17 +402,20 @@ const Index = () => {
 
           {/* Key Statistics */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-            {Object.entries(currentContent.opportunity.stats).map(([key, stat], index) => (
-              <Card key={key} className={`futuristic-border text-center animate-scale-in stagger-${index + 1} hover:shadow-lg transition-all duration-500`}>
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-4xl font-bold text-black font-mono mb-2">{stat.number}</CardTitle>
-                  <CardDescription className="text-black font-semibold text-sm uppercase tracking-wide">{stat.label}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-xs text-muted-foreground font-mono leading-relaxed">{stat.desc}</p>
-                </CardContent>
-              </Card>
-            ))}
+            {Object.entries(currentContent.opportunity.stats).map(([key, stat], index) => {
+              const s = stat as { number: string; label: string; desc: string };
+              return (
+                <Card key={key} className={`futuristic-border text-center animate-scale-in stagger-${index + 1} hover:shadow-lg transition-all duration-500`}>
+                  <CardHeader className="pb-4">
+                    <CardTitle className="text-4xl font-bold text-black font-mono mb-2">{s.number}</CardTitle>
+                    <CardDescription className="text-black font-semibold text-sm uppercase tracking-wide">{s.label}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-xs text-muted-foreground font-mono leading-relaxed">{s.desc}</p>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
 
           {/* Key Insight */}
@@ -462,80 +459,6 @@ const Index = () => {
               </div>
             </CardContent>
           </Card>
-        </div>
-      </section>
-
-      {/* Social Media Section */}
-      <section className="py-24 px-6 bg-gray-50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-20 animate-slide-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6 tracking-tight">
-              {currentContent.social.title}
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light">
-              {currentContent.social.subtitle}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
-            {/* LinkedIn */}
-            <Card className="futuristic-border animate-scale-in stagger-1 hover:shadow-xl transition-all duration-500">
-              <CardHeader>
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">in</span>
-                  </div>
-                  <div>
-                    <CardTitle className="text-xl text-black font-mono">{currentContent.social.platforms.linkedin.title}</CardTitle>
-                    <p className="text-sm text-muted-foreground font-mono">{currentContent.social.platforms.linkedin.handle}</p>
-                  </div>
-                </div>
-                <CardDescription className="text-muted-foreground leading-relaxed">
-                  {currentContent.social.platforms.linkedin.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Button className="w-full bg-blue-600 text-white hover:bg-blue-700 font-mono text-sm">
-                  {currentContent.social.platforms.linkedin.cta}
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Instagram */}
-            <Card className="futuristic-border animate-scale-in stagger-2 hover:shadow-xl transition-all duration-500">
-              <CardHeader>
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">📷</span>
-                  </div>
-                  <div>
-                    <CardTitle className="text-xl text-black font-mono">{currentContent.social.platforms.instagram.title}</CardTitle>
-                    <p className="text-sm text-muted-foreground font-mono">{currentContent.social.platforms.instagram.handle}</p>
-                  </div>
-                </div>
-                <CardDescription className="text-muted-foreground leading-relaxed">
-                  {currentContent.social.platforms.instagram.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 font-mono text-sm">
-                  {currentContent.social.platforms.instagram.cta}
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="text-center">
-            <Card className="max-w-3xl mx-auto glass-card border border-gray-200 animate-slide-up stagger-3">
-              <CardContent className="p-8">
-                <p className="text-muted-foreground leading-relaxed font-light">
-                  {currentContent.social.engagement}
-                </p>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </section>
 
@@ -633,9 +556,11 @@ const Index = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground text-sm font-mono">{currentContent.cta.entrepreneursDesc}</p>
-                <Button className="w-full bg-black text-white hover:bg-gray-800 font-mono text-sm">
-                  Apply
-                </Button>
+                <a href="https://wa.me/14242160643" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full bg-black text-white hover:bg-gray-800 font-mono text-sm">
+                    Apply
+                  </Button>
+                </a>
               </CardContent>
             </Card>
 
@@ -645,9 +570,11 @@ const Index = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground text-sm font-mono">{currentContent.cta.investorsDesc}</p>
-                <Button className="w-full bg-black text-white hover:bg-gray-800 font-mono text-sm">
-                  Learn More
-                </Button>
+                <a href="https://wa.me/14242160643" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full bg-black text-white hover:bg-gray-800 font-mono text-sm">
+                    Learn More
+                  </Button>
+                </a>
               </CardContent>
             </Card>
 
@@ -657,9 +584,11 @@ const Index = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground text-sm font-mono">{currentContent.cta.talentDesc}</p>
-                <Button className="w-full bg-black text-white hover:bg-gray-800 font-mono text-sm">
-                  Join Us
-                </Button>
+                <a href="https://wa.me/14242160643" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full bg-black text-white hover:bg-gray-800 font-mono text-sm">
+                    Join Us
+                  </Button>
+                </a>
               </CardContent>
             </Card>
           </div>
