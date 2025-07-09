@@ -25,7 +25,7 @@ const Index = () => {
       // Header
       nav: {
         opportunity: 'Oportunidad',
-        methodology: 'Metodología',
+        methodology: 'Tesis',
         about: 'Nosotros',
         contact: 'Contacto'
       },
@@ -95,7 +95,7 @@ const Index = () => {
           linkedin: {
             title: 'LinkedIn',
             handle: '@ferrixventures',
-            description: 'Insights profesionales sobre venture acceleration, market analysis y thought leadership en transformación digital.',
+            description: 'Insights profesionales sobre venture acceleration, market analysis y thought about en transformación digital.',
             cta: 'Seguir en LinkedIn'
           },
           instagram: {
@@ -115,17 +115,19 @@ const Index = () => {
         partnership: {
           title: 'Partnership Acceleration',
           subtitle: 'Mantienes control mayoritario',
-          equity: '0-50% equity'
+          equity: '0-50% equity',
+          description: 'Mantén majority control mientras aceleramos tu growth mediante AI-powered systems y strategic expertise. Perfecto para entrepreneurs que quieren exponential growth pero no están listos para full exit.'
         },
         acquisition: {
           title: 'Acquisition Acceleration', 
           subtitle: 'Máxima aceleración AI-powered',
-          equity: '50-100% acquisition'
+          equity: '50-100% acquisition',
+          description: 'Maximum speed y capital deployment through majority/full ownership. Implementamos aggressive AI-powered acceleration strategies sin partnership constraints para entrepreneurs listos para strategic exit.'
         }
       },
 
-      // Leadership
-      leadership: {
+      // About
+      about: {
         title: 'Liderazgo',
         founder: 'Santiago Sáenz Ariza',
         role: 'Founder & Managing Partner',
@@ -147,7 +149,7 @@ const Index = () => {
       // Header
       nav: {
         opportunity: 'Opportunity',
-        methodology: 'Methodology',
+        methodology: 'Thesis',
         about: 'About',
         contact: 'Contact'
       },
@@ -164,7 +166,7 @@ const Index = () => {
         title: 'The $12T Opportunity',
         subtitle: 'While VC chases 500K startups with 90% failure rate, 358M established businesses with proven cash flow await exponential acceleration.',
         context: {
-          title: 'The Market VC Ignores',
+          title: '',
           description: 'There\'s a massive disconnect between where venture capital flows and where the real growth opportunity lies. While VC funds invest $300B annually in startups with 90% probability of failure, 358 million profitable SMEs generate $12+ trillion in value but lack access to world-class technological acceleration.',
           marketGap: 'This gap represents the largest untapped investment opportunity in modern history: a market 10x larger than the startup ecosystem, with proven fundamentals and desperate need for digital transformation.',
           timing: 'With AI democratizing capabilities once exclusive to tech giants, it\'s now possible to accelerate traditional ventures toward exponential growth at a fraction of the cost and risk of building from scratch.'
@@ -217,13 +219,13 @@ const Index = () => {
           linkedin: {
             title: 'LinkedIn',
             handle: '@ferrixventures',
-            description: 'Professional insights on venture acceleration, market analysis and thought leadership in digital transformation.',
+            description: 'Professional insights on venture acceleration, market analysis and thought about in digital transformation.',
             cta: 'Follow on LinkedIn'
           },
           instagram: {
             title: 'Instagram',
             handle: '@ferrix.ventures',
-            description: 'Behind-the-scenes of the first AI-first Venture Acceleration Studio, team culture and journey moments.',
+            description: 'Behind-the-scenes of the first AI-first Venture Acceleration Studio, about culture and journey moments.',
             cta: 'Follow on Instagram'
           }
         },
@@ -237,18 +239,20 @@ const Index = () => {
         partnership: {
           title: 'Partnership Acceleration',
           subtitle: 'You maintain majority control',
-          equity: '0-50% equity'
+          equity: '0-50% equity',
+          description: 'Maintain majority control while we accelerate your growth with AI-powered systems and strategic expertise. Perfect for entrepreneurs seeking exponential growth but not yet ready for a full exit.'
         },
         acquisition: {
           title: 'Acquisition Acceleration',
           subtitle: 'Maximum AI-powered acceleration',
-          equity: '50-100% acquisition'
+          equity: '50-100% acquisition',
+          description: 'Maximum speed and capital deployment through majority or full ownership. We implement aggressive AI-powered acceleration strategies without partnership constraints for entrepreneurs ready for a strategic exit.'
         }
       },
 
-      // Leadership
-      leadership: {
-        title: 'Leadership',
+      // About
+      about: {
+        title: 'About',
         founder: 'Santiago Sáenz Ariza',
         role: 'Founder & Managing Partner',
         vision: '"Venture Acceleration takes the best of both worlds: proven ventures + AI exponential acceleration."'
@@ -291,7 +295,7 @@ const Index = () => {
               <a href="#opportunity" className="text-sm font-mono text-muted-foreground hover:text-black transition-colors duration-300">
                 {currentContent.nav.opportunity}
               </a>
-              <a href="#methodology" className="text-sm font-mono text-muted-foreground hover:text-black transition-colors duration-300">
+              <a href="#redefining" className="text-sm font-mono text-muted-foreground hover:text-black transition-colors duration-300">
                 {currentContent.nav.methodology}
               </a>
               <a href="#about" className="text-sm font-mono text-muted-foreground hover:text-black transition-colors duration-300">
@@ -333,7 +337,7 @@ const Index = () => {
           {mobileMenuOpen && (
             <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border-b border-gray-200/50 py-4 px-6 space-y-4">
               <a href="#opportunity" className="block text-sm font-mono text-muted-foreground hover:text-black">{currentContent.nav.opportunity}</a>
-              <a href="#methodology" className="block text-sm font-mono text-muted-foreground hover:text-black">{currentContent.nav.methodology}</a>
+              <a href="#redefining" className="block text-sm font-mono text-muted-foreground hover:text-black">{currentContent.nav.methodology}</a>
               <a href="#about" className="block text-sm font-mono text-muted-foreground hover:text-black">{currentContent.nav.about}</a>
               <a href="#contact" className="block text-sm font-mono text-muted-foreground hover:text-black">{currentContent.nav.contact}</a>
             </div>
@@ -403,15 +407,17 @@ const Index = () => {
             );
           })}
         </div>
+        <div className="flex flex-col items-center text-center mt-20 mb-4 px-2 md:px-10 lg:px-32 xl:px-56">
+          <p className="text-lg md:text-2xl text-black font-bold mb-4 max-w-3xl">
+            Venture capital flows to risky startups, ignoring the world’s largest pool of proven, cash-flowing companies.
+          </p>
+        </div>
 
         {/* Market Context - Integrated */}
         <div className="mt-20 mb-4 flex flex-col items-center text-center px-2 md:px-10 lg:px-32 xl:px-56">
           <h3 className="text-3xl md:text-5xl font-extrabold text-black mb-6 tracking-tight leading-tight">
-            The Market VC Ignores
+            
           </h3>
-          <p className="text-lg md:text-2xl text-black font-bold mb-4 max-w-3xl">
-            Venture capital flows to risky startups, ignoring the world’s largest pool of proven, cash-flowing companies.
-          </p>
         </div>
       </section>
 
@@ -460,46 +466,58 @@ const Index = () => {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Partnership Acceleration */}
-            <Card className="futuristic-border animate-scale-in stagger-1 hover:shadow-xl transition-all duration-500">
+            <Card className="futuristic-border animate-scale-in stagger-1 hover:shadow-xl transition-all duration-500 flex flex-col justify-between h-full">
               <CardHeader>
                 <Badge className="w-fit bg-black text-white hover:bg-black font-mono text-xs">TRACK 1</Badge>
                 <CardTitle className="text-2xl text-black font-mono">{currentContent.methodology.partnership.title}</CardTitle>
                 <CardDescription className="text-muted-foreground text-base font-light">
                   {currentContent.methodology.partnership.subtitle}
                 </CardDescription>
+                <p className="text-sm text-black font-normal mt-2">
+                  {currentContent.methodology.partnership.description}
+                </p>
               </CardHeader>
               <CardContent>
                 <div className="bg-gray-50 p-4 rounded border border-gray-200">
                   <p className="text-sm text-black font-mono"><strong>Equity:</strong> {currentContent.methodology.partnership.equity}</p>
                 </div>
+                <a href="https://wa.me/14242160643" target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-black text-white w-full mt-6 hover:bg-gray-900">Apply</Button>
+                </a>
               </CardContent>
             </Card>
 
             {/* Acquisition Acceleration */}
-            <Card className="futuristic-border animate-scale-in stagger-2 hover:shadow-xl transition-all duration-500">
+            <Card className="futuristic-border animate-scale-in stagger-2 hover:shadow-xl transition-all duration-500 flex flex-col justify-between h-full">
               <CardHeader>
-                <Badge className="w-fit bg-gray-100 text-black hover:bg-gray-100 font-mono text-xs">TRACK 2</Badge>
+                <Badge className="w-fit bg-black text-white hover:bg-black font-mono text-xs">TRACK 2</Badge>
                 <CardTitle className="text-2xl text-black font-mono">{currentContent.methodology.acquisition.title}</CardTitle>
                 <CardDescription className="text-muted-foreground text-base font-light">
                   {currentContent.methodology.acquisition.subtitle}
                 </CardDescription>
+                <p className="text-sm text-black font-normal mt-2">
+                  {currentContent.methodology.acquisition.description}
+                </p>
               </CardHeader>
               <CardContent>
                 <div className="bg-gray-50 p-4 rounded border border-gray-200">
                   <p className="text-sm text-black font-mono"><strong>Equity:</strong> {currentContent.methodology.acquisition.equity}</p>
                 </div>
+                <a href="https://wa.me/14242160643" target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-black text-white w-full mt-6 hover:bg-gray-900">Apply</Button>
+                </a>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Leadership Section */}
+      {/* About Section */}
       <section id="about" className="py-24 px-6 bg-white">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-20 animate-slide-up">
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-6 tracking-tight">
-              {currentContent.leadership.title}
+              {currentContent.about.title}
             </h2>
           </div>
 
@@ -514,15 +532,15 @@ const Index = () => {
                   height={112}
                 />
               </div>
-              <CardTitle className="text-3xl text-black font-mono font-extrabold mb-2">{currentContent.leadership.founder}</CardTitle>
+              <CardTitle className="text-3xl text-black font-mono font-extrabold mb-2">{currentContent.about.founder}</CardTitle>
               <CardDescription className="text-lg text-black font-medium font-mono opacity-80 mb-2">
-                {currentContent.leadership.role}
+                {currentContent.about.role}
               </CardDescription>
             </CardHeader>
             <CardContent>
               <blockquote className="bg-black/90 p-8 rounded-xl">
                 <p className="text-white italic text-lg leading-relaxed font-light text-center">
-                  {currentContent.leadership.vision}
+                  {currentContent.about.vision}
                 </p>
               </blockquote>
             </CardContent>
