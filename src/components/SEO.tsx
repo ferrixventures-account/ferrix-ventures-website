@@ -84,28 +84,7 @@ const SEO: React.FC<SEOProps> = ({
           property: `og:locale`,
           content: lang === 'es' ? 'es_ES' : 'en_US',
         },
-        // SVG as primary og:image
-        {
-          property: `og:image`,
-          content: imageUrl,
-        },
-        {
-          property: `og:image:type`,
-          content: 'image/svg+xml',
-        },
-        {
-          property: `og:image:width`,
-          content: '281',
-        },
-        {
-          property: `og:image:height`,
-          content: '132',
-        },
-        {
-          property: `og:image:alt`,
-          content: 'Ferrix Ventures Logo',
-        },
-        // PNG fallback og:image
+        // PNG as primary and only og:image
         {
           property: `og:image`,
           content: '/Ferrix Ventures - 281x132 - 3x.png',
@@ -139,12 +118,7 @@ const SEO: React.FC<SEOProps> = ({
           name: `twitter:description`,
           content: description,
         },
-        // Twitter SVG (not all platforms support SVG, but included for completeness)
-        {
-          name: `twitter:image`,
-          content: imageUrl,
-        },
-        // Twitter PNG fallback
+        // Twitter PNG only
         {
           name: `twitter:image`,
           content: '/Ferrix Ventures - 281x132 - 3x.png',
