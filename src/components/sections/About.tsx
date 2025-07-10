@@ -23,6 +23,9 @@ const About: React.FC<AboutProps> = ({ aboutContent, ctaContent }) => {
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 tracking-tight">
             {aboutContent.title}
           </h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-12">
+            "We founded Ferrix Ventures after learning a hard lesson from our previous startup experience: building from scratch is brutally difficult. We realized the most effective path to impact isn't starting from zero, but transforming what already works. We take profitable businesses and scale them with modern technology and startup strategies."
+          </p>
         </div>
 
                 <Card className="bg-muted/50 animate-fade-in-up">
