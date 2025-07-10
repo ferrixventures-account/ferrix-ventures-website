@@ -50,7 +50,7 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
       
       // Hero Section
       hero: {
-        headline: 'AI-First Venture Acceleration Studio',
+        headline: 'Estudio de Aceleración de Ventures con IA',
         subheadline: 'Transformamos negocios tradicionales en líderes digitales con crecimiento exponencial.',
         cta: 'Explorar Metodología'
       },
@@ -58,10 +58,10 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
       // Opportunity Section
       opportunity: {
         title: 'La Oportunidad de $12T',
-        subtitle: 'Mientras VC persigue 500K startups con 90% failure rate, 358M negocios establecidos con cash flow probado esperan aceleración exponencial.',
+        subtitle: 'Mientras el VC persigue 500K startups de alto riesgo y 90% tasa de fracaso, 358M negocios establecidos y rentables esperan aceleración exponencial.',
         context: {
           title: 'El Mercado Que VC Ignora',
-          description: 'Existe una desconexión masiva entre donde fluye el capital de riesgo y donde está la verdadera oportunidad de crecimiento. Mientras fondos VC invierten $300B anuales en startups con 90% probabilidad de fracaso, 358 millones de SMEs rentables generan $12+ trillones en valor pero carecen de acceso a aceleración tecnológica de clase mundial.',
+          description: 'El capital de riesgo fluye hacia startups riesgosas, ignorando el mayor grupo mundial de empresas comprobadas y rentables.',
           marketGap: 'Esta brecha representa la mayor oportunidad de inversión no explotada en la historia moderna: un mercado 10x más grande que el startup ecosystem, con fundamentals probados y necesidad desesperada de transformación digital.',
           timing: 'Con IA democratizando capacidades antes exclusivas de tech giants, ahora es posible acelerar ventures tradicionales hacia crecimiento exponencial a una fracción del costo y riesgo de construir desde cero.'
         },
@@ -113,17 +113,39 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
           linkedin: {
             title: 'LinkedIn',
             handle: '@ferrixventures',
-            description: 'Insights profesionales sobre venture acceleration, market analysis y thought about en transformación digital.',
+            description: 'Insights profesionales sobre aceleración de ventures, análisis de mercado y liderazgo en transformación digital.',
             cta: 'Seguir en LinkedIn'
           },
           instagram: {
             title: 'Instagram',
             handle: '@ferrix.ventures',
-            description: 'Behind-the-scenes del primer AI-first Venture Acceleration Studio, cultura de equipo y momentos del journey.',
+            description: 'Detrás de cámaras del primer estudio de aceleración de ventures impulsado por IA, cultura de equipo y momentos clave del recorrido.',
             cta: 'Seguir en Instagram'
           }
         },
         engagement: 'Únete a la conversación sobre el futuro de venture acceleration y comparte tu perspectiva sobre transformación digital.'
+      },
+      // Redefining Venture Acceleration Section
+      redefining: {
+        title: 'Redefiniendo la Aceleración de Ventures',
+        description: 'Los venture studios tradicionales crean empresas desde cero con 90% de probabilidad de fracaso. Los fondos de private equity optimizan financieramente pero no transforman tecnológicamente. Hay una oportunidad masiva entre estos dos extremos.',
+        cards: [
+          {
+            title: 'IA-Primero',
+            subtitle: 'Estudio de Aceleración',
+            desc: 'Aceleramos negocios existentes con IA y tecnología avanzada, no creamos empresas nuevas'
+          },
+          {
+            title: 'Estratégico',
+            subtitle: 'Despliegue de Capital',
+            desc: 'Desplegamos capital para acelerar el crecimiento, no para validar product-market fit'
+          },
+          {
+            title: 'Sistemático',
+            subtitle: 'Plataforma de Aceleración',
+            desc: 'Metodologías probadas que aceleran ventures de forma predecible y escalable'
+          }
+        ]
       },
 
       // Methodology Section
@@ -134,19 +156,19 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
           title: 'Partnership Acceleration',
           subtitle: 'Mantienes control mayoritario',
           equity: '0-50% equity',
-          description: 'Mantén majority control mientras aceleramos tu growth mediante AI-powered systems y strategic expertise. Perfecto para entrepreneurs que quieren exponential growth pero no están listos para full exit.'
+          description: 'Mantén el control mayoritario mientras aceleramos tu crecimiento mediante sistemas impulsados por IA y experiencia estratégica. Perfecto para emprendedores que buscan crecimiento exponencial pero no están listos para una salida total.'
         },
         acquisition: {
           title: 'Acquisition Acceleration', 
           subtitle: 'Máxima aceleración AI-powered',
           equity: '50-100% acquisition',
-          description: 'Maximum speed y capital deployment through majority/full ownership. Implementamos aggressive AI-powered acceleration strategies sin partnership constraints para entrepreneurs listos para strategic exit.'
+          description: 'Máxima velocidad y despliegue de capital a través de la propiedad mayoritaria o total. Implementamos estrategias agresivas de aceleración impulsadas por IA sin restricciones de asociación, para emprendedores listos para una salida estratégica.'
         }
       },
 
       // About
       about: {
-        title: 'Liderazgo',
+        title: 'Nosotros',
         founder: 'Santiago Sáenz Ariza',
         role: 'Founder & Managing Partner',
         vision: '"Venture Acceleration toma lo mejor de ambos mundos: ventures probados + aceleración AI exponencial."'
@@ -160,10 +182,48 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
         investors: 'Inversionistas',
         investorsDesc: 'Nueva asset class con mejor risk-return profile',
         talent: 'Talento AI',
-        talentDesc: 'Construye la infraestructura de venture acceleration'
+        talentDesc: 'Construye la infraestructura de venture acceleration',
+        talentTitle: 'Únete a Nuestra Red de Talento AI',
+        talentDescLong: 'Ayúdanos a construir el futuro de la aceleración de ventures. Buscamos ingenieros de IA, operadores y constructores digitales.',
+        talentButton: 'Únete',
+        investorTitle: 'Sé Parte de la\nPróxima Clase de Activos',
+        investorDesc: 'Únete a nuestro fondo y participa en la próxima ola de creación de valor impulsada por IA en empresas comprobadas. Diversifica tu portafolio y únete a un grupo selecto de inversionistas visionarios.',
+        investorSubDesc: 'Accede a una oportunidad de inversión diferenciada: aceleración AI de compañías establecidas y con flujo de caja.',
+        investorButton: 'Aprende cómo invertir',
+        apply: 'Aplicar'
+      },
+      // Footer Section
+      footer: {
+        rights: 'Todos los derechos reservados.'
       }
     },
     en: {
+      // Footer Section
+      footer: {
+        rights: 'All rights reserved.'
+      },
+      // Redefining Venture Acceleration Section
+      redefining: {
+        title: 'Redefining Venture Acceleration',
+        description: "Traditional venture studios build companies from scratch with 90% failure probability. Private equity funds optimize financially but don't transform technologically. There's a massive opportunity between these two extremes.",
+        cards: [
+          {
+            title: 'AI-First',
+            subtitle: 'Acceleration Studio',
+            desc: "We accelerate existing ventures with AI and advanced tech stacks, we don't build new companies"
+          },
+          {
+            title: 'Strategic',
+            subtitle: 'Capital Deployment',
+            desc: 'We deploy capital to accelerate growth, not to validate product-market fit'
+          },
+          {
+            title: 'Systematic',
+            subtitle: 'Acceleration Platform',
+            desc: 'Proven methodologies that accelerate ventures predictably and scalably'
+          }
+        ]
+      },
       // Header
       nav: {
         opportunity: 'Opportunity',
@@ -185,7 +245,7 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
         subtitle: 'While VC chases 500K startups with 90% failure rate, 358M established businesses with proven cash flow await exponential acceleration.',
         context: {
           title: '',
-          description: 'There\'s a massive disconnect between where venture capital flows and where the real growth opportunity lies. While VC funds invest $300B annually in startups with 90% probability of failure, 358 million profitable SMEs generate $12+ trillion in value but lack access to world-class technological acceleration.',
+          description: "Venture capital flows to risky startups, ignoring the world’s largest pool of proven, cash-flowing companies.",
           marketGap: 'This gap represents the largest untapped investment opportunity in modern history: a market 10x larger than the startup ecosystem, with proven fundamentals and desperate need for digital transformation.',
           timing: 'With AI democratizing capabilities once exclusive to tech giants, it\'s now possible to accelerate traditional ventures toward exponential growth at a fraction of the cost and risk of building from scratch.'
         },
@@ -280,11 +340,19 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
       cta: {
         title: 'Ready for AI Acceleration?',
         entrepreneurs: 'Entrepreneurs',
-        entrepreneursDesc: 'Evaluate if your venture is ideal for acceleration',
+        entrepreneursDesc: 'See if your venture is ideal for acceleration',
         investors: 'Investors',
-        investorsDesc: 'New asset class with better risk-return profile',
+        investorsDesc: 'A new asset class with a better risk-return profile',
         talent: 'AI Talent',
-        talentDesc: 'Build the venture acceleration infrastructure'
+        talentDesc: 'Build the infrastructure for venture acceleration',
+        talentTitle: 'Join Our AI Talent Network',
+        talentDescLong: 'Help us build the future of venture acceleration. We’re looking for AI engineers, operators, and digital builders.',
+        talentButton: 'Join Us',
+        investorTitle: 'Be Part of the\nNext Asset Class',
+        investorDesc: 'Join our fund and be part of the next wave of AI-powered value creation in proven businesses. Diversify your portfolio and join a select group of forward-thinking investors.',
+        investorSubDesc: 'Access a differentiated investment opportunity: AI-powered acceleration of established, cash-flowing companies.',
+        investorButton: 'Learn how to invest',
+        apply: 'Apply'
       }
     }
   };
@@ -383,7 +451,7 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
                 size="lg" 
                 className="bg-black text-white hover:bg-gray-800 px-8 py-4 text-lg font-mono transition-all duration-300 hover:scale-105 flex items-center"
               >
-                Our Thesis
+                {currentContent.hero.cta}
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
             </a>
@@ -400,9 +468,9 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
       <section id="opportunity" className="py-24 px-6 bg-white">
         <div className="container mx-auto max-w-5xl px-4 md:px-12 lg:px-24">
           <div className="text-center mb-16 animate-slide-up">
-            <h2 className="text-5xl font-extrabold text-black mb-4 tracking-tight">The $12T Opportunity</h2>
+            <h2 className="text-5xl font-extrabold text-black mb-4 tracking-tight">{currentContent.opportunity.title}</h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto font-light mb-0">
-              358M established, profitable businesses are waiting for exponential acceleration—while VC chases 500K high-risk startups.
+              {currentContent.opportunity.subtitle}
             </p>
           </div>
 
@@ -427,7 +495,7 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
         </div>
         <div className="flex flex-col items-center text-center mt-20 mb-4 px-2 md:px-10 lg:px-32 xl:px-56">
           <p className="text-lg md:text-2xl text-black font-bold mb-4 max-w-3xl">
-            Venture capital flows to risky startups, ignoring the world’s largest pool of proven, cash-flowing companies.
+            {currentContent.opportunity.context.description}
           </p>
         </div>
 
@@ -444,28 +512,20 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16 animate-slide-up">
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-6 tracking-tight">
-              Redefining Venture Acceleration
+              {currentContent.redefining.title}
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto font-light">
-              Traditional venture studios build companies from scratch with 90% failure probability. Private equity funds optimize financially but don't transform technologically. There's a massive opportunity between these two extremes.
+              {currentContent.redefining.description}
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-10">
-            <div className="bg-white rounded-xl border border-gray-200 shadow-sm flex flex-col items-center justify-center p-10 text-center transition-all">
-              <div className="text-2xl md:text-3xl font-extrabold text-black mb-2">AI-First</div>
-              <div className="text-lg md:text-xl font-bold uppercase text-black mb-4 tracking-wide">Acceleration Studio</div>
-              <div className="text-base text-muted-foreground font-mono">We accelerate existing ventures with AI and advanced tech stacks, we don't build new companies</div>
-            </div>
-            <div className="bg-white rounded-xl border border-gray-200 shadow-sm flex flex-col items-center justify-center p-10 text-center transition-all">
-              <div className="text-2xl md:text-3xl font-extrabold text-black mb-2">Strategic</div>
-              <div className="text-lg md:text-xl font-bold uppercase text-black mb-4 tracking-wide">Capital Deployment</div>
-              <div className="text-base text-muted-foreground font-mono">We deploy capital to accelerate growth, not to validate product-market fit</div>
-            </div>
-            <div className="bg-white rounded-xl border border-gray-200 shadow-sm flex flex-col items-center justify-center p-10 text-center transition-all">
-              <div className="text-2xl md:text-3xl font-extrabold text-black mb-2">Systematic</div>
-              <div className="text-lg md:text-xl font-bold uppercase text-black mb-4 tracking-wide">Acceleration Platform</div>
-              <div className="text-base text-muted-foreground font-mono">Proven methodologies that accelerate ventures predictably and scalably</div>
-            </div>
+            {currentContent.redefining.cards.map((card, idx) => (
+              <div key={idx} className="bg-white rounded-xl border border-gray-200 shadow-sm flex flex-col items-center justify-center p-10 text-center transition-all">
+                <div className="text-2xl md:text-3xl font-extrabold text-black mb-2">{card.title}</div>
+                <div className="text-lg md:text-xl font-bold uppercase text-black mb-4 tracking-wide">{card.subtitle}</div>
+                <div className="text-base text-muted-foreground font-mono">{card.desc}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -500,7 +560,7 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
                   <p className="text-sm text-black font-mono"><strong>Equity:</strong> {currentContent.methodology.partnership.equity}</p>
                 </div>
                 <a href="https://wa.me/14242160643" target="_blank" rel="noopener noreferrer">
-                  <Button className="bg-black text-white w-full mt-6 hover:bg-gray-900">Apply</Button>
+                  <Button className="bg-black text-white w-full mt-6 hover:bg-gray-900">{currentContent.cta.apply}</Button>
                 </a>
               </CardContent>
             </Card>
@@ -522,7 +582,7 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
                   <p className="text-sm text-black font-mono"><strong>Equity:</strong> {currentContent.methodology.acquisition.equity}</p>
                 </div>
                 <a href="https://wa.me/14242160643" target="_blank" rel="noopener noreferrer">
-                  <Button className="bg-black text-white w-full mt-6 hover:bg-gray-900">Apply</Button>
+                  <Button className="bg-black text-white w-full mt-6 hover:bg-gray-900">{currentContent.cta.apply}</Button>
                 </a>
               </CardContent>
             </Card>
@@ -565,14 +625,14 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
             {/* Recruiting CTA Card */}
             <Card className="glass-card border border-gray-100 bg-white/80 backdrop-blur-lg rounded-2xl mt-8 animate-scale-in">
               <CardHeader className="text-center flex flex-col items-center">
-                <CardTitle className="text-2xl text-black font-mono font-extrabold mb-2">Join Our AI Talent Network</CardTitle>
+                <CardTitle className="text-2xl text-black font-mono font-extrabold mb-2">{currentContent.cta.talentTitle}</CardTitle>
                 <CardDescription className="text-base text-black font-mono opacity-80 mb-4">
-                  Help us build the future of venture acceleration. We’re looking for AI engineers, operators, and digital builders.
+                  {currentContent.cta.talentDescLong}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <a href="https://wa.me/14242160643" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-black text-white hover:bg-gray-800 font-mono text-lg">Join Us</Button>
+                  <Button className="w-full bg-black text-white hover:bg-gray-800 font-mono text-lg">{currentContent.cta.talentButton}</Button>
                 </a>
               </CardContent>
             </Card>
@@ -584,10 +644,15 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
   <div className="container mx-auto max-w-4xl">
     <div className="text-center mb-12">
       <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight animate-slide-up">
-        Be Part of the<br />Next Asset Class
+        {currentContent.cta.investorTitle.split('\n').map((line, idx) => (
+          <React.Fragment key={idx}>
+            {line}
+            <br />
+          </React.Fragment>
+        ))}
       </h2>
       <p className="text-lg md:text-xl text-gray-300 font-light max-w-2xl mx-auto">
-        Join our fund and be part of the next wave of AI-powered value creation in proven businesses. Diversify your portfolio and join a select group of forward-thinking investors.
+        {currentContent.cta.investorDesc}
       </p>
     </div>
     <div className="flex justify-center">
@@ -595,11 +660,11 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
         
         <CardContent className="space-y-4">
           <p className="text-muted-foreground text-base font-mono">
-            Access a differentiated investment opportunity: AI-powered acceleration of established, cash-flowing companies.
+            {currentContent.cta.investorSubDesc}
           </p>
           <a href="https://wa.me/14242160643" target="_blank" rel="noopener noreferrer" className="block mt-6">
             <Button className="w-full bg-black text-white hover:bg-gray-800 font-mono text-lg">
-              Learn how to invest
+              {currentContent.cta.investorButton}
             </Button>
           </a>
         </CardContent>
@@ -620,7 +685,7 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
           </div>
           
           <p className="text-xs text-muted-foreground mt-2 font-mono">
-            © 2025 Ferrix Ventures. All rights reserved.
+            © 2025 Ferrix Ventures. {currentContent.footer.rights}
           </p>
         </div>
       </footer>
