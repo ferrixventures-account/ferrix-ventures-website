@@ -100,6 +100,39 @@ const Header: React.FC<HeaderProps> = ({ language, toggleLanguage, navContent, i
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-sm shadow-lg animate-fade-in-down">
+          <nav className="flex flex-col items-center space-y-4 py-8">
+            <a href="#opportunity" onClick={() => setMobileMenuOpen(false)} className="text-lg font-mono text-muted-foreground hover:text-foreground transition-colors duration-300">
+              {navContent.opportunity}
+            </a>
+            <a href="#redefining" onClick={() => setMobileMenuOpen(false)} className="text-lg font-mono text-muted-foreground hover:text-foreground transition-colors duration-300">
+              {navContent.methodology}
+            </a>
+            <a href="#about" onClick={() => setMobileMenuOpen(false)} className="text-lg font-mono text-muted-foreground hover:text-foreground transition-colors duration-300">
+              {navContent.about}
+            </a>
+            <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="text-lg font-mono text-muted-foreground hover:text-foreground transition-colors duration-300">
+              {navContent.contact}
+            </a>
+            <div className="flex items-center space-x-4 pt-4">
+              <Button variant="ghost" size="icon" onClick={toggleLanguage} className="text-base font-mono relative w-10 h-10">
+                <span className={`absolute transition-all duration-150 ${isLangChanging ? 'scale-0 opacity-0' : 'scale-100 opacity-100'}`}>
+                  {language === 'es' ? 'EN' : 'ES'}
+                </span>
+              </Button>
+              <Button variant="ghost" size="icon" onClick={toggleTheme} className="relative w-10 h-10">
+                <span className="sr-only">Toggle theme</span>
+                {theme === 'light' && <Sun className={`absolute h-[1.5rem] w-[1.5rem] transition-all duration-150 ${isThemeChanging ? 'rotate-90 scale-0 opacity-0' : 'rotate-0 scale-100 opacity-100'}`} />}
+                {theme === 'dark' && <Moon className={`absolute h-[1.5rem] w-[1.5rem] transition-all duration-150 ${isThemeChanging ? 'rotate-90 scale-0 opacity-0' : 'rotate-0 scale-100 opacity-100'}`} />}
+                {theme === 'system' && <Monitor className={`absolute h-[1.5rem] w-[1.5rem] transition-all duration-150 ${isThemeChanging ? 'rotate-90 scale-0 opacity-0' : 'rotate-0 scale-100 opacity-100'}`} />}
+              </Button>
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };
