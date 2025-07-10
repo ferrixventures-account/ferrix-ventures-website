@@ -19,11 +19,11 @@ const SEO: React.FC<SEOProps> = ({
   description,
   lang,
   url,
-  imageUrl = 'https://ferrixventures.com/og-image.jpg',
+  imageUrl = '/Ferrix Ventures - 281x132.svg',
   author = 'Ferrix Ventures',
   keywords = [],
   type = 'website',
-  logoUrl = 'https://ferrixventures.com/logo.png', // Assuming a logo path
+  logoUrl = '/Ferrix Ventures - 281x132.svg',
   socials = {},
 }) => {
   const socialLinks = Object.values(socials);
@@ -46,6 +46,7 @@ const SEO: React.FC<SEOProps> = ({
       }}
       title={title}
       meta={[
+        // Standard SEO
         {
           name: `description`,
           content: description,
@@ -58,6 +59,7 @@ const SEO: React.FC<SEOProps> = ({
           name: `author`,
           content: author,
         },
+        // OpenGraph
         {
           property: `og:title`,
           content: title,
@@ -75,9 +77,56 @@ const SEO: React.FC<SEOProps> = ({
           content: url,
         },
         {
+          property: `og:site_name`,
+          content: title,
+        },
+        {
+          property: `og:locale`,
+          content: lang === 'es' ? 'es_ES' : 'en_US',
+        },
+        // SVG as primary og:image
+        {
           property: `og:image`,
           content: imageUrl,
         },
+        {
+          property: `og:image:type`,
+          content: 'image/svg+xml',
+        },
+        {
+          property: `og:image:width`,
+          content: '281',
+        },
+        {
+          property: `og:image:height`,
+          content: '132',
+        },
+        {
+          property: `og:image:alt`,
+          content: 'Ferrix Ventures Logo',
+        },
+        // PNG fallback og:image
+        {
+          property: `og:image`,
+          content: '/Ferrix Ventures - 281x132 - 3x.png',
+        },
+        {
+          property: `og:image:type`,
+          content: 'image/png',
+        },
+        {
+          property: `og:image:width`,
+          content: '843',
+        },
+        {
+          property: `og:image:height`,
+          content: '396',
+        },
+        {
+          property: `og:image:alt`,
+          content: 'Ferrix Ventures Logo',
+        },
+        // Twitter
         {
           name: `twitter:card`,
           content: `summary_large_image`,
@@ -90,9 +139,28 @@ const SEO: React.FC<SEOProps> = ({
           name: `twitter:description`,
           content: description,
         },
+        // Twitter SVG (not all platforms support SVG, but included for completeness)
         {
           name: `twitter:image`,
           content: imageUrl,
+        },
+        // Twitter PNG fallback
+        {
+          name: `twitter:image`,
+          content: '/Ferrix Ventures - 281x132 - 3x.png',
+        },
+        {
+          name: `twitter:image:alt`,
+          content: 'Ferrix Ventures Logo',
+        },
+        // Twitter handle placeholders
+        {
+          name: `twitter:site`,
+          content: '@ferrixventures', // Replace with actual handle if available
+        },
+        {
+          name: `twitter:creator`,
+          content: '@ferrixventures', // Replace with actual handle if available
         },
       ]}
     >

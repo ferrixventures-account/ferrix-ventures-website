@@ -10,7 +10,7 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setThemeState] = useState<Theme>('system');
+  const [theme, setThemeState] = useState<Theme>('light');
 
   // Set theme to HTML root
   const applyTheme = (theme: Theme) => {

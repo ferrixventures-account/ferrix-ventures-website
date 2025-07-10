@@ -2,8 +2,8 @@ export const content = {
     es: {
       // SEO Metadata
       meta: {
-        title: "Ferrix Ventures - Estudio de Aceleración de Ventures con IA",
-        description: "El primer Estudio de Aceleración de Ventures con IA de América Latina. Transformamos empresas establecidas en líderes digitales de clase mundial a través de metodologías de aceleración impulsadas por IA.",
+        title: "Ferrix Ventures - AI-First Venture Acceleration Studio",
+        description: "Invertimos en empresas rentables y las transformamos en negocios de crecimiento exponencial usando tecnología de frontera y un go-to-market de startup.",
         keywords: ["aceleración de ventures", "IA", "transformación digital", "América Latina", "crecimiento empresarial", "venture studio", "private equity", "aceleración de startups"]
       },
 
@@ -157,7 +157,7 @@ Próxima Clase de Activos`,
       // SEO Metadata
       meta: {
         title: "Ferrix Ventures - AI-First Venture Acceleration Studio",
-        description: "Latin America's first AI-first Venture Acceleration Studio. We transform established businesses into world-class digital leaders through AI-powered acceleration methodologies.",
+        description: "We invest in profitable businesses and transform them into exponential growth enterprises using frontier technology and a startup go-to-market.",
         keywords: ["venture acceleration", "AI", "digital transformation", "Latin America", "business growth", "venture studio", "private equity", "startup acceleration"]
       },
 
