@@ -79,26 +79,7 @@ export const content = {
         }
       },
 
-      // Social Media Section
-      social: {
-        title: 'Síguenos en Redes',
-        subtitle: 'Mantente actualizado con insights sobre venture acceleration y el futuro de los negocios.',
-        platforms: {
-          linkedin: {
-            title: 'LinkedIn',
-            handle: '@ferrixventures',
-            description: 'Insights profesionales sobre aceleración de ventures, análisis de mercado y liderazgo en transformación digital.',
-            cta: 'Seguir en LinkedIn'
-          },
-          instagram: {
-            title: 'Instagram',
-            handle: '@ferrix.ventures',
-            description: 'Detrás de cámaras del primer estudio de aceleración de ventures impulsado por IA, cultura de equipo y momentos clave del recorrido.',
-            cta: 'Seguir en Instagram'
-          }
-        },
-        engagement: 'Únete a la conversación sobre el futuro de venture acceleration y comparte tu perspectiva sobre transformación digital.'
-      },
+
       // Redefining Venture Acceleration Section
       redefining: {
         title: 'Redefiniendo la Aceleración de Ventures',
@@ -278,26 +259,7 @@ Próxima Clase de Activos`,
         }
       },
 
-      // Social Media Section
-      social: {
-        title: 'Follow Us',
-        subtitle: 'Stay updated with insights on venture acceleration and the future of business.',
-        platforms: {
-          linkedin: {
-            title: 'LinkedIn',
-            handle: '@ferrixventures',
-            description: 'Professional insights on venture acceleration, market analysis and thought about in digital transformation.',
-            cta: 'Follow on LinkedIn'
-          },
-          instagram: {
-            title: 'Instagram',
-            handle: '@ferrix.ventures',
-            description: 'Behind-the-scenes of the first AI-first Venture Acceleration Studio, about culture and journey moments.',
-            cta: 'Follow on Instagram'
-          }
-        },
-        engagement: 'Join the conversation about the future of venture acceleration and share your perspective on digital transformation.'
-      },
+
 
       // Methodology Section
       methodology: {
