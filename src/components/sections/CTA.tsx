@@ -29,13 +29,13 @@ const CTA: React.FC<CTAProps> = ({ content }) => {
           </p>
         </div>
         <div className="flex justify-center">
-          <Card className="bg-black dark:bg-white w-full max-w-[28rem] animate-fade-in pt-8 pb-4 px-6">
+          <Card className="bg-black dark:bg-white w-full max-w-[28rem] pt-8 pb-4 px-6">
             <CardContent className="space-y-4">
-              <p className="text-gray-400 dark:text-gray-500 text-base font-mono">
+              <p className="text-white dark:text-black text-base font-mono">
                 {content.investorSubDesc}
               </p>
               <a href="https://wa.me/14242160643" target="_blank" rel="noopener noreferrer" className="block mt-6">
-                <Button variant="invert" className="w-full font-mono text-lg">
+                <Button className="w-full font-mono text-lg">
                   {content.investorButton}
                 </Button>
               </a>
