@@ -33,14 +33,14 @@ const Methodology: React.FC<MethodologyProps> = ({ content, cta }) => {
                     <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 tracking-tight">
             {content.title}
           </h2>
-                    <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light">
+                    <p className="text-lg text-muted-foreground max-w-3xl mx-auto font-light">
             {content.subtitle}
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Partnership Acceleration */}
-                    <Card className="flex flex-col justify-between h-full bg-muted">
+                    <Card className="flex flex-col justify-between h-full ">
             <CardHeader>
                             <Badge variant="secondary" className="w-fit font-mono text-xs">TRACK 1</Badge>
                             <CardTitle className="text-2xl text-foreground font-mono">{content.partnership.title}</CardTitle>
@@ -52,7 +52,7 @@ const Methodology: React.FC<MethodologyProps> = ({ content, cta }) => {
               </p>
             </CardHeader>
             <CardContent>
-              <div className="bg-muted p-4 rounded-lg">
+              <div className=" p-4 rounded-lg">
                 <p className="text-sm text-foreground font-mono"><strong>Equity:</strong> {content.partnership.equity}</p>
               </div>
               <a href="https://wa.me/14242160643" target="_blank" rel="noopener noreferrer">
@@ -62,7 +62,7 @@ const Methodology: React.FC<MethodologyProps> = ({ content, cta }) => {
           </Card>
 
           {/* Acquisition Acceleration */}
-                    <Card className="flex flex-col justify-between h-full bg-muted">
+                    <Card className="flex flex-col justify-between h-full ">
             <CardHeader>
                             <Badge variant="secondary" className="w-fit font-mono text-xs">TRACK 2</Badge>
                             <CardTitle className="text-2xl text-foreground font-mono">{content.acquisition.title}</CardTitle>
@@ -74,7 +74,7 @@ const Methodology: React.FC<MethodologyProps> = ({ content, cta }) => {
               </p>
             </CardHeader>
             <CardContent>
-              <div className="bg-muted p-4 rounded-lg">
+              <div className=" p-4 rounded-lg">
                 <p className="text-sm text-foreground font-mono"><strong>Equity:</strong> {content.acquisition.equity}</p>
               </div>
               <a href="https://wa.me/14242160643" target="_blank" rel="noopener noreferrer">

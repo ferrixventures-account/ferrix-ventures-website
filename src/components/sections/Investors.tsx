@@ -24,7 +24,7 @@ const Investors: React.FC<InvestorsProps> = ({ content }) => {
               </React.Fragment>
             ))}
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 dark:text-gray-500 font-light max-w-2xl mx-auto">
+          <p className="text-lg text-gray-400 dark:text-gray-500 font-light max-w-2xl mx-auto">
             {content.investorDesc}
           </p>
           <div className="mt-8">

@@ -17,7 +17,7 @@ interface AboutProps {
 
 const About: React.FC<AboutProps> = ({ aboutContent, ctaContent }) => {
   return (
-    <section id="about" className="py-24 px-6 bg-background">
+    <section id="about" className="py-24 px-6 bg-white dark:bg-black">
       <div className="container mx-auto max-w-4xl">
                 <div className="text-center mb-20 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 tracking-tight">
@@ -36,8 +36,8 @@ const About: React.FC<AboutProps> = ({ aboutContent, ctaContent }) => {
                 height={112}
               />
             </div>
-            <CardTitle className="text-3xl text-foreground font-mono font-extrabold mb-2">{aboutContent.founder}</CardTitle>
-                        <CardDescription className="text-lg text-muted-foreground font-medium font-mono mb-2">
+            <CardTitle className="text-2xl text-foreground font-mono font-extrabold mb-2">{aboutContent.founder}</CardTitle>
+                        <CardDescription className="text-base text-muted-foreground font-medium font-mono mb-2">
               {aboutContent.role}
             </CardDescription>
             <div className="flex flex-col items-center gap-2 mb-2 mt-8">
