@@ -52,7 +52,7 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
       hero: {
         headline: 'Estudio de Aceleración de Ventures con IA',
         subheadline: 'Transformamos negocios tradicionales en líderes digitales con crecimiento exponencial.',
-        cta: 'Explorar Metodología'
+        cta: 'Explora nuestra Tesis'
       },
 
       // Opportunity Section
@@ -236,7 +236,7 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
       hero: {
         headline: 'AI-First Venture Acceleration Studio',
         subheadline: 'We transform established ventures into exponential digital leaders.',
-        cta: 'Explore Methodology'
+        cta: 'Explore our Thesis'
       },
 
       // Opportunity Section
