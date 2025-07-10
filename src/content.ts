@@ -2,7 +2,7 @@ export const content = {
     es: {
       // SEO Metadata
       meta: {
-        title: "Ferrix Ventures - AI-First Venture Acceleration Studio",
+        title: "Ferrix Ventures - Venture Acceleration Studio",
         description: "Invertimos en empresas rentables y las transformamos en negocios de crecimiento exponencial usando tecnología de frontera y un go-to-market de startup.",
         keywords: ["aceleración de ventures", "IA", "transformación digital", "América Latina", "crecimiento empresarial", "venture studio", "private equity", "aceleración de startups"]
       },
@@ -156,7 +156,7 @@ Próxima Clase de Activos`,
     en: {
       // SEO Metadata
       meta: {
-        title: "Ferrix Ventures - AI-First Venture Acceleration Studio",
+        title: "Ferrix Ventures - Venture Acceleration Studio",
         description: "We invest in profitable businesses and transform them into exponential growth enterprises using frontier technology and a startup go-to-market.",
         keywords: ["venture acceleration", "AI", "digital transformation", "Latin America", "business growth", "venture studio", "private equity", "startup acceleration"]
       },
