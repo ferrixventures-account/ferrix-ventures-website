@@ -12,7 +12,7 @@ import Opportunity from '@/components/sections/Opportunity';
 import Redefining from '@/components/sections/Redefining';
 import Methodology from '@/components/sections/Methodology';
 import About from '@/components/sections/About';
-import CTA from '@/components/sections/CTA';
+import Investors from '@/components/sections/Investors';
 import SEO from '@/components/SEO';
 
 interface IndexProps {
@@ -88,8 +88,8 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
         {/* About Section */}
         <About aboutContent={currentContent.about} ctaContent={currentContent.cta} />
         
-        {/* CTA Section */}
-        <CTA content={currentContent.cta} />
+        {/* Investors Section */}
+        <Investors content={currentContent.cta} />
       </main>
 
       <Footer content={currentContent.footer} />

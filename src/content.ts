@@ -148,7 +148,7 @@ export const content = {
         vision: "\"Venture Acceleration toma lo mejor de ambos mundos: ventures probados + aceleración AI exponencial.\""
       },
 
-      // CTA Section
+      // Investors Section
       cta: {
         title: '¿Listo para Aceleración AI?',
         entrepreneurs: 'Entrepreneurs',
@@ -325,7 +325,7 @@ Próxima Clase de Activos`,
         vision: "\"Venture Acceleration takes the best of both worlds: proven ventures + AI exponential acceleration.\""
       },
 
-      // CTA Section
+      // Investors Section
       cta: {
         title: 'Ready for AI Acceleration?',
         entrepreneurs: 'Entrepreneurs',
