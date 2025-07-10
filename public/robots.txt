@@ -1,14 +1,7 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
+# Allow all crawlers to access the site.
 User-agent: *
+Allow: /
+
+# Point crawlers to the sitemap.
+Sitemap: https://ferrixventures.com/sitemap.xml
 Allow: /
