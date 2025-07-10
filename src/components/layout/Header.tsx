@@ -21,6 +21,14 @@ const Header: React.FC<HeaderProps> = ({ language, toggleLanguage, navContent, i
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isThemeChanging, setIsThemeChanging] = useState(false);
 
+  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
@@ -44,11 +52,11 @@ const Header: React.FC<HeaderProps> = ({ language, toggleLanguage, navContent, i
     }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="#home" className="flex items-center group">
+          <a href="#" onClick={scrollToTop} className="flex items-center group">
             <img 
-              src="/Logos - 281x132 - Ferrix Ventures.png" 
+              src="/Ferrix Ventures - 281x132.svg" 
               alt="Ferrix Ventures Logo" 
-              className="h-10 w-auto transition-transform duration-300 group-hover:scale-110"
+              className="h-10 w-auto transition-transform duration-300 group-hover:scale-110 dark:invert"
             />
           </a>
 

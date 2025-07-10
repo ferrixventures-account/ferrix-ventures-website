@@ -63,7 +63,7 @@ const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
         keywords={currentContent.meta.keywords}
         lang={language as 'en' | 'es'}
         url={pageUrl}
-        socials={currentContent.social.platforms}
+
       />
       <Header 
         language={language}
