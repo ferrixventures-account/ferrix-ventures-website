@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { ThemeProvider } from '@/theme/ThemeContext';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from '@vercel/analytics/react';
 
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
             </Routes>
           </BrowserRouter>
           <SpeedInsights />
+          <Analytics />
         </div>
       </TooltipProvider>
     </QueryClientProvider>
