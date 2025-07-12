@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 interface AboutProps {
   aboutContent: {
     title: string;
+    story: string;
     founder: string;
     role: string;
   };
@@ -24,7 +25,7 @@ const About: React.FC<AboutProps> = ({ aboutContent, ctaContent }) => {
             {aboutContent.title}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-12">
-            "We founded Ferrix Ventures after learning a hard lesson from our previous startup experience: building from scratch is brutally difficult. We realized the most effective path to impact isn't starting from zero, but transforming what already works. We take profitable businesses and scale them with modern technology and startup strategies."
+            {aboutContent.story}
           </p>
         </div>
 

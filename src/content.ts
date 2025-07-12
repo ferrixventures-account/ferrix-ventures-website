@@ -124,6 +124,7 @@ export const content = {
       // About
       about: {
         title: 'Nosotros',
+        story: `"Fundamos Ferrix Ventures después de aprender una dura lección de nuestra experiencia previa en startups: construir desde cero es brutalmente difícil. Nos dimos cuenta de que el camino más efectivo hacia el impacto no es empezar desde cero, sino transformar lo que ya funciona. Tomamos negocios rentables y los escalamos con tecnología moderna y estrategias de startup."`,
         founder: 'Santiago Sáenz Ariza',
         role: 'Founder & Managing Partner',
         vision: "\"Venture Acceleration toma lo mejor de ambos mundos: ventures probados + aceleración AI exponencial.\""
@@ -282,6 +283,7 @@ Próxima Clase de Activos`,
       // About
       about: {
         title: 'About',
+        story: `"We founded Ferrix Ventures after learning a hard lesson from our previous startup experience: building from scratch is brutally difficult. We realized the most effective path to impact isn't starting from zero, but transforming what already works. We take profitable businesses and scale them with modern technology and startup strategies."`,
         founder: 'Santiago Sáenz Ariza',
         role: 'Founder & Managing Partner',
         vision: "\"Venture Acceleration takes the best of both worlds: proven ventures + AI exponential acceleration.\""
