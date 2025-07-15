@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { useLocation, Link, useNavigate } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useLanguage } from '../hooks/useLanguage';
 import { Helmet } from 'react-helmet-async';
 import { content } from '../content';
 import Header from '@/components/layout/Header';
@@ -8,29 +9,7 @@ import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 
 const NotFound: React.FC = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  const getLangFromPath = (path: string): 'en' | 'es' => (path.startsWith('/es') ? 'es' : 'en');
-  const [language, setLanguage] = useState<'en' | 'es'>(getLangFromPath(location.pathname));
-  const [isLangChanging, setIsLangChanging] = useState(false);
-
-  useEffect(() => {
-    const lang = getLangFromPath(location.pathname);
-    if (lang !== language) {
-      setLanguage(lang);
-    }
-  }, [location.pathname, language]);
-
-  const toggleLanguage = () => {
-    setIsLangChanging(true);
-    setTimeout(() => {
-      const newLang = language === 'es' ? 'en' : 'es';
-      const homePath = newLang === 'es' ? '/es' : '/';
-      navigate(homePath);
-      setTimeout(() => setIsLangChanging(false), 75);
-    }, 150);
-  };
+  const { language, toggleLanguage, isLangChanging } = useLanguage();
 
   const currentContent = content[language];
   const homeUrl = language === 'es' ? '/es' : '/';

@@ -15,12 +15,12 @@ export const content = {
       },
 
       // Header
-      nav: {
-        opportunity: 'Oportunidad',
-        methodology: 'Tesis',
-        about: 'Nosotros',
-        contact: 'Invertir'
-      },
+      nav: [
+        { text: 'Oportunidad', href: '#opportunity' },
+        { text: 'Metodología', href: '#redefining' },
+        { text: 'Nosotros', href: '#about' },
+        { text: 'Invierte', href: '/thesis' },
+      ],
       
       // Hero Section
       hero: {
@@ -152,6 +152,131 @@ Próxima Clase de Activos`,
       // Footer Section
       footer: {
         rights: 'Todos los derechos reservados.'
+      },
+
+      // Thesis Page
+      thesis: {
+        meta: {
+          title: "Cómo las Sardinas se Comen a las Ballenas - Ferrix Ventures",
+          description: "Redefiniendo la Creación de Valor en la Era Digital. Nuestra tesis es simple pero poderosa: fondos pequeños, ágiles y tecnológicos pueden adquirir empresas tradicionales más grandes y transformarlas en motores de crecimiento exponencial.",
+          keywords: ["capital de riesgo", "private equity", "transformación digital", "creación de valor", "estrategia de inversión"]
+        },
+        hero: {
+          title: "Cómo las Sardinas se Comen a las Ballenas",
+          subtitle: "El capital de riesgo tradicional invierte en startups arriesgadas. El capital privado optimiza empresas maduras para mejoras modestas. <span class='font-bold text-black dark:text-white'>Hemos sido pioneros en un tercer camino que combina retornos de nivel startup con la estabilidad de negocios establecidos.</span>",
+          cta: "Contacta a Nuestro Equipo de Inversión"
+        },
+        valuation: {
+          title: "El Arbitraje de Valoración:<br />Nuestra Ventaja Matemática",
+          description: "Al adquirir negocios tradicionales rentables e infundirles tecnología propietaria, desbloqueamos un crecimiento exponencial y recalificamos su valoración de múltiplos tradicionales a múltiplos tecnológicos.",
+          traditional: {
+            multiple: "2-5x",
+            label: "Múltiplo de Ingresos",
+            businessType: "Negocios Tradicionales"
+          },
+          tech: {
+            multiple: "10-100x",
+            label: "Múltiplo de Ingresos",
+            businessType: "Empresas Tecnológicas"
+          }
+        },
+        whyNow: {
+          title: "Por Qué Esta Estrategia Funciona Ahora",
+          cards: [
+            {
+              title: "Un Modelo de Inversión con Riesgo Mitigado",
+              description: "A diferencia de las nuevas empresas con una tasa de fracaso del 90%, adquirimos compañías que ya han ganado las batallas más difíciles.",
+              points: [
+                "Flujos de ingresos probados y flujo de caja operativo",
+                "Bases de clientes establecidas",
+                "Product-market fit validado"
+              ]
+            },
+            {
+              title: "El Factor de Aceleración de la IA",
+              description: "La revolución de la IA ha democratizado tecnología antes exclusiva de startups de élite. Desplegamos sistemas sofisticados rápidamente.",
+              points: [
+                "Adquisición de clientes automatizada y basada en datos",
+                "Análisis predictivo para pronósticos de mercado",
+                "Optimización operativa inteligente"
+              ]
+            },
+            {
+              title: "Momento de Mercado sin Precedentes",
+              description: "Una convergencia única de factores ha creado una tormenta perfecta para nuestra estrategia.",
+              points: [
+                "358M de PYMES establecidas globalmente buscando transformación digital",
+                "$12T+ en valor bloqueado en negocios tradicionales",
+                "La transferencia de riqueza generacional prepara a más dueños para una salida estratégica"
+              ]
+            }
+          ]
+        },
+        methodology: {
+          title: "La Metodología de la Sardina que se Come a la Ballena",
+          steps: [
+            { phase: 1, title: "Adquisición Estratégica", description: "Identificamos y adquirimos PYMES rentables con fundamentos sólidos pero una estrategia digital subdesarrollada." },
+            { phase: 2, title: "Integración de IA y Tecnología", description: "Desplegamos nuestro manual de estrategias, instalando un stack tecnológico moderno e integrando sistemas automatizados y basados en datos en el ADN del negocio." },
+            { phase: 3, title: "Crecimiento Exponencial", description: "Con metodologías de startup aplicadas, logramos un crecimiento acelerado de los ingresos, una mejor posición en el mercado y un múltiplo de valoración que refleja un verdadero líder digital." },
+            { phase: 4, title: "Salida Estratégica", description: "Una vez completada la transformación, buscamos una salida estratégica, ya sea a través de una OPI o una adquisición, para realizar los retornos para nuestros inversores." }
+          ]
+        },
+        advantage: {
+          title: "Nuestra Ventaja",
+          description: "No solo adquirimos negocios; los transformamos. Nuestra tecnología propietaria de IA y automatización, combinada con nuestra experiencia operativa, crea una ventaja injusta.",
+          cards: [
+            { title: "Flujo de Acuerdos Propietario", description: "Obtenemos acuerdos fuera del mercado a través de nuestra red exclusiva, evitando subastas competitivas y asegurando múltiplos de entrada favorables." },
+            { title: "Crecimiento Impulsado por la Tecnología", description: "Nuestros expertos internos en IA y automatización implementan sistemas que impulsan la eficiencia operativa y desbloquean nuevas fuentes de ingresos." },
+            { title: "Excelencia Operacional", description: "Tenemos un manual probado para escalar negocios, desde la optimización de embudos de marketing hasta la racionalización de las operaciones financieras." }
+          ]
+        },
+        assetClass: {
+          title: "Una Nueva Clase de Activos: Lo Mejor de Ambos Mundos",
+          description: "Ferrix Ventures combina el alto potencial de crecimiento del capital de riesgo con la estabilidad de bajo riesgo del capital privado, creando un perfil de retorno ajustado al riesgo superior.",
+          cards: {
+            vc: { title: "VC Tradicional", risk: "Alto", returns: "Potencial alto, pero impredecible", model: "Participaciones minoritarias en startups no probadas" },
+            ferrix: { title: "Ferrix Ventures", risk: "Mitigado y de bajo riesgo", returns: "Exponencial y predecible", model: "Participaciones mayoritarias en negocios probados y con flujo de caja" },
+            pe: { title: "Private Equity", risk: "Bajo", returns: "Modestos y estables", model: "Control total de empresas maduras y de bajo crecimiento" }
+          }
+        },
+        investmentPath: {
+          title: "Tu Camino de Inversión",
+          description: "Ofrecemos dos fondos distintos para que coincidan con tu perfil de inversión, cada uno con un camino claro para comenzar.",
+          tracks: [
+            { title: "Fondo de Asociación", target: "Negocios de $5M-$50M", equity: "20-49% de participación", returns: "3-10x en 3-5 años", profile: "Menor riesgo a través de un modelo de asociación enfocado en el crecimiento conjunto." },
+            { title: "Fondo de Adquisición", target: "Negocios de $10M-$100M", equity: "50-100% de participación", returns: "Potencial de 10-50x a través de la transformación completa", profile: "Mayor potencial de retorno a través del control operativo total." }
+          ],
+          nextSteps: {
+            title: "Próximos Pasos y Mínimos",
+            steps: {
+              title: "Próximos Pasos",
+              items: [
+                "Agenda una llamada con nuestro equipo de inversión.",
+                "Revisa los materiales y proyecciones detalladas del fondo.",
+                "Completa la calificación de inversionista."
+              ]
+            },
+            minimums: {
+              title: "Mínimos de Inversión",
+              items: [
+                { investor: "Inversionistas Acreditados", amount: "$25,000" },
+                { investor: "Inversionistas Institucionales", amount: "$500,000" },
+                { investor: "Socios Estratégicos", amount: "Estructuras personalizadas" }
+              ]
+            }
+          }
+        },
+        contact: {
+          title: "Contacta a Nuestro Equipo de Inversión",
+          description: "¿Listo para explorar la próxima clase de activos? Agenda una llamada con nuestro fundador para discutir cómo Ferrix Ventures puede alinearse con tus objetivos de inversión.",
+          card: {
+            name: "Santiago Sáenz Ariza",
+            title: "Fundador y Socio Director",
+            email: "santiago@ferrix.ventures",
+            linkedin: "LinkedIn",
+            cta: "Agendar una Reunión"
+          }
+        }
       }
     },
     en: {
@@ -196,12 +321,12 @@ Próxima Clase de Activos`,
         ]
       },
       // Header
-      nav: {
-        opportunity: 'Opportunity',
-        methodology: 'Thesis',
-        about: 'About',
-        contact: 'Invest'
-      },
+      nav: [
+        { text: 'Opportunity', href: '#opportunity' },
+        { text: 'Methodology', href: '#redefining' },
+        { text: 'About', href: '#about' },
+        { text: 'Invest', href: '/thesis' },
+      ],
 
       // Hero Section
       hero: {
@@ -307,6 +432,131 @@ Next Asset Class`,
         investorSubDesc: 'Access a differentiated investment opportunity: AI-powered acceleration of established, cash-flowing companies.',
         investorButton: 'Learn how to invest',
         apply: 'Apply'
+      },
+
+      // Thesis Page
+      thesis: {
+        meta: {
+          title: "How Minnows Swallow Whales - Ferrix Ventures",
+          description: "Redefining Value Creation in the Digital Age. Our core thesis is simple but powerful: Small, agile, tech-enabled funds can acquire larger, traditional businesses and transform them into exponential growth engines.",
+          keywords: ["venture capital", "private equity", "digital transformation", "value creation", "investment strategy"]
+        },
+        hero: {
+          title: "How Minnows Swallow Whales",
+          subtitle: "Traditional venture capital invests in risky startups. Private equity optimizes mature businesses for modest improvements. <span class='font-bold text-black dark:text-white'>We've pioneered a third path that combines startup-level returns with the stability of established businesses.</span>",
+          cta: "Contact Our Investment Team"
+        },
+        valuation: {
+          title: "The Valuation Arbitrage:<br />Our Mathematical Advantage",
+          description: "By acquiring profitable, traditional businesses and infusing them with proprietary technology, we unlock exponential growth and re-rate their valuation from traditional to tech multiples.",
+          traditional: {
+            multiple: "2-5x",
+            label: "Revenue Multiple",
+            businessType: "Traditional Businesses"
+          },
+          tech: {
+            multiple: "10-100x",
+            label: "Revenue Multiple",
+            businessType: "Tech-Enabled Companies"
+          }
+        },
+        whyNow: {
+          title: "Why This Strategy Works Now",
+          cards: [
+            {
+              title: "A De-Risked Investment Model",
+              description: "Unlike new ventures with a 90% failure rate, we acquire companies that have already won the hardest battles.",
+              points: [
+                "Proven revenue streams and operational cash flow",
+                "Established customer bases",
+                "Validated product-market fit"
+              ]
+            },
+            {
+              title: "The AI Acceleration Factor",
+              description: "The AI revolution has democratized technology once exclusive to elite startups. We rapidly deploy sophisticated systems.",
+              points: [
+                "Automated, data-driven customer acquisition",
+                "Predictive analytics for market forecasting",
+                "Intelligent operational optimization"
+              ]
+            },
+            {
+              title: "Unprecedented Market Timing",
+              description: "A unique convergence of factors has created a perfect storm for our strategy.",
+              points: [
+                "358M established SMEs globally seeking digital transformation",
+                "$12T+ in value locked in traditional businesses",
+                "Generational wealth transfer makes more owners ready for a strategic exit"
+              ]
+            }
+          ]
+        },
+        methodology: {
+          title: "The Minnow Swallowing the Whale Methodology",
+          steps: [
+            { phase: 1, title: "Strategic Acquisition", description: "We identify and acquire profitable SMEs with strong fundamentals but an underdeveloped digital strategy." },
+            { phase: 2, title: "AI & Technology Integration", description: "We deploy our core playbook, installing a modern tech stack and embedding data-driven, automated systems into the business's DNA." },
+            { phase: 3, title: "Exponential Growth", description: "With startup methodologies applied, we achieve accelerated revenue growth, enhanced market positioning, and a valuation multiple that reflects a true digital leader." },
+            { phase: 4, title: "Strategic Exit", description: "Once transformation is complete, we pursue a strategic exit—either through an IPO or acquisition—to realize returns for our investors." }
+          ]
+        },
+        advantage: {
+          title: "Our Advantage",
+          description: "We don't just acquire businesses; we transform them. Our proprietary AI and automation technology, combined with our operational expertise, creates an unfair advantage.",
+          cards: [
+            { title: "Proprietary Deal Flow", description: "We source off-market deals through our exclusive network, avoiding competitive auctions and securing favorable entry multiples." },
+            { title: "Tech-Driven Growth", description: "Our in-house AI and automation experts implement systems that drive operational efficiency and unlock new revenue streams." },
+            { title: "Operational Excellence", description: "We have a proven playbook for scaling businesses, from optimizing marketing funnels to streamlining financial operations." }
+          ]
+        },
+        assetClass: {
+          title: "A New Asset Class: The Best of Both Worlds",
+          description: "Ferrix Ventures combines the high-growth potential of venture capital with the de-risked stability of private equity, creating a superior risk-adjusted return profile.",
+          cards: {
+            vc: { title: "Traditional VC", risk: "High", returns: "High potential, but unpredictable", model: "Minority stakes in unproven startups" },
+            ferrix: { title: "Ferrix Ventures", risk: "Mitigated & De-Risked", returns: "Exponential & Predictable", model: "Majority stakes in proven, cash-flowing businesses" },
+            pe: { title: "Private Equity", risk: "Low", returns: "Modest & Stable", model: "Full control of mature, slow-growth companies" }
+          }
+        },
+        investmentPath: {
+          title: "Your Investment Path",
+          description: "We offer two distinct funds to match your investment profile, each with a clear path to getting started.",
+          tracks: [
+            { title: "Partnership Fund", target: "$5M-$50M businesses", equity: "20-49% ownership", returns: "3-10x in 3-5 years", profile: "Lower risk through a partnership model focused on joint growth." },
+            { title: "Acquisition Fund", target: "$10M-$100M businesses", equity: "50-100% ownership", returns: "10-50x potential through full transformation", profile: "Higher return potential through full operational control." }
+          ],
+          nextSteps: {
+            title: "Next Steps & Minimums",
+            steps: {
+              title: "Next Steps",
+              items: [
+                "Schedule a call with our investment team.",
+                "Review detailed fund materials and projections.",
+                "Complete investor qualification."
+              ]
+            },
+            minimums: {
+              title: "Investment Minimums",
+              items: [
+                { investor: "Accredited Investors", amount: "$25,000" },
+                { investor: "Institutional Investors", amount: "$500,000" },
+                { investor: "Strategic Partners", amount: "Custom structures" }
+              ]
+            }
+          }
+        },
+        contact: {
+          title: "Contact Our Investment Team",
+          description: "Ready to explore the next asset class? Schedule a call with our founder to discuss how Ferrix Ventures can align with your investment goals.",
+          card: {
+            name: "Santiago Sáenz Ariza",
+            title: "Founder & Managing Partner",
+            email: "santiago@ferrix.ventures",
+            linkedin: "LinkedIn",
+            cta: "Schedule a Meeting"
+          }
+        }
       }
     }
   };

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { useLanguage } from '../hooks/useLanguage';
 import { content } from '../content';
 
 // Layout Components
@@ -16,30 +16,11 @@ import Investors from '@/components/sections/Investors';
 import SEO from '@/components/SEO';
 
 interface IndexProps {
-  forcedLanguage?: string;
+  forcedLanguage?: 'en' | 'es';
 }
 
 const Index: React.FC<IndexProps> = ({ forcedLanguage }) => {
-  const [language, setLanguage] = useState(forcedLanguage || 'en');
-  const navigate = useNavigate();
-  const [isLangChanging, setIsLangChanging] = useState(false);
-
-  // Sync language with forcedLanguage prop
-  useEffect(() => {
-    if (forcedLanguage && forcedLanguage !== language) {
-      setLanguage(forcedLanguage);
-    }
-  }, [forcedLanguage, language]);
-
-  const toggleLanguage = () => {
-    setIsLangChanging(true);
-    setTimeout(() => {
-      const newLang = language === 'es' ? 'en' : 'es';
-      setLanguage(newLang);
-      navigate(newLang === 'es' ? '/es' : '/');
-      setTimeout(() => setIsLangChanging(false), 75);
-    }, 150);
-  };
+  const { language, toggleLanguage, isLangChanging } = useLanguage(forcedLanguage);
 
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);

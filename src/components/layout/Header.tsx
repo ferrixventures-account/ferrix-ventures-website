@@ -2,16 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sun, Moon, Monitor, Menu, X } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+
+interface NavItem {
+  text: string;
+  href: string;
+}
 
 interface HeaderProps {
   language: string;
   toggleLanguage: () => void;
-  navContent: {
-    opportunity: string;
-    methodology: string;
-    about: string;
-    contact: string;
-  };
+  navContent: NavItem[];
   isLangChanging: boolean;
 }
 
@@ -20,9 +21,36 @@ const Header: React.FC<HeaderProps> = ({ language, toggleLanguage, navContent, i
   const [scrollY, setScrollY] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isThemeChanging, setIsThemeChanging] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
+  const handleLinkClick = (href: string) => {
+    setMobileMenuOpen(false);
+    const homeUrl = language === 'es' ? '/es' : '/';
+
+    if (href.startsWith('#')) {
+      const sectionId = href.substring(1);
+      if (location.pathname !== homeUrl) {
+        navigate(homeUrl);
+        setTimeout(() => {
+          const section = document.getElementById(sectionId);
+          if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100); // Timeout to allow navigation to complete
+      } else {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    } else {
+      const targetUrl = language === 'es' && !href.startsWith('/es') && href.startsWith('/') ? `/es${href}` : href;
+      navigate(targetUrl);
+    }
+  };
+
+  const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
@@ -52,27 +80,24 @@ const Header: React.FC<HeaderProps> = ({ language, toggleLanguage, navContent, i
     }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="#" onClick={scrollToTop} className="flex items-center group">
+          <Link to={language === 'es' ? '/es' : '/'} onClick={scrollToTop} className="flex items-center group">
             <img 
               src="/Ferrix Ventures - 281x132.svg" 
               alt="Ferrix Ventures Logo" 
               className="h-10 w-auto transition-transform duration-300 group-hover:scale-110 dark:invert"
             />
-          </a>
+          </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#opportunity" className="text-sm font-mono text-muted-foreground hover:text-foreground transition-colors duration-300">
-              {navContent.opportunity}
-            </a>
-            <a href="#redefining" className="text-sm font-mono text-muted-foreground hover:text-foreground transition-colors duration-300">
-              {navContent.methodology}
-            </a>
-            <a href="#about" className="text-sm font-mono text-muted-foreground hover:text-foreground transition-colors duration-300">
-              {navContent.about}
-            </a>
-            <a href="#contact" className="text-sm font-mono text-muted-foreground hover:text-foreground transition-colors duration-300">
-              {navContent.contact}
-            </a>
+            {navContent.map((item) => (
+              <button
+                key={item.text}
+                onClick={() => handleLinkClick(item.href)}
+                className="text-sm font-mono text-muted-foreground hover:text-foreground transition-colors duration-300 bg-transparent border-none p-0 cursor-pointer"
+              >
+                {item.text}
+              </button>
+            ))}
           </nav>
 
           <div className="hidden md:flex items-center space-x-2">
@@ -105,18 +130,15 @@ const Header: React.FC<HeaderProps> = ({ language, toggleLanguage, navContent, i
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-sm shadow-lg animate-fade-in-down">
           <nav className="flex flex-col items-center space-y-4 py-8">
-            <a href="#opportunity" onClick={() => setMobileMenuOpen(false)} className="text-lg font-mono text-muted-foreground hover:text-foreground transition-colors duration-300">
-              {navContent.opportunity}
-            </a>
-            <a href="#redefining" onClick={() => setMobileMenuOpen(false)} className="text-lg font-mono text-muted-foreground hover:text-foreground transition-colors duration-300">
-              {navContent.methodology}
-            </a>
-            <a href="#about" onClick={() => setMobileMenuOpen(false)} className="text-lg font-mono text-muted-foreground hover:text-foreground transition-colors duration-300">
-              {navContent.about}
-            </a>
-            <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="text-lg font-mono text-muted-foreground hover:text-foreground transition-colors duration-300">
-              {navContent.contact}
-            </a>
+            {navContent.map((item) => (
+              <button
+                key={item.text}
+                onClick={() => handleLinkClick(item.href)}
+                className="text-lg font-mono text-muted-foreground hover:text-foreground transition-colors duration-300 bg-transparent border-none p-0 cursor-pointer"
+              >
+                {item.text}
+              </button>
+            ))}
             <div className="flex items-center space-x-4 pt-4">
               <Button variant="ghost" size="icon" onClick={toggleLanguage} className="text-base font-mono relative w-10 h-10">
                 <span className={`absolute transition-all duration-150 ${isLangChanging ? 'scale-0 opacity-0' : 'scale-100 opacity-100'}`}>
