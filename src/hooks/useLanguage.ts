@@ -1,27 +1,27 @@
 import { useState, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { usePathname, useRouter } from 'next/navigation';
 
 export const useLanguage = (forcedLanguage?: 'en' | 'es') => {
-  const location = useLocation();
-  const navigate = useNavigate();
+  const pathname = usePathname();
+  const router = useRouter();
 
   const getLangFromPath = (path: string): 'en' | 'es' => (path.startsWith('/es') ? 'es' : 'en');
 
-  const [language, setLanguage] = useState<'en' | 'es'>(forcedLanguage || getLangFromPath(location.pathname));
+  const [language, setLanguage] = useState<'en' | 'es'>(forcedLanguage || getLangFromPath(pathname));
   const [isLangChanging, setIsLangChanging] = useState(false);
 
   useEffect(() => {
-    const lang = forcedLanguage || getLangFromPath(location.pathname);
+    const lang = forcedLanguage || getLangFromPath(pathname);
     if (lang !== language) {
       setLanguage(lang);
     }
-  }, [location.pathname, forcedLanguage, language]);
+  }, [pathname, forcedLanguage, language]);
 
   const toggleLanguage = () => {
     setIsLangChanging(true);
     setTimeout(() => {
       const newLang = language === 'es' ? 'en' : 'es';
-      const currentPath = location.pathname;
+      const currentPath = pathname;
       let newPath;
 
       if (newLang === 'es') {
@@ -39,7 +39,7 @@ export const useLanguage = (forcedLanguage?: 'en' | 'es') => {
       }
       
       setLanguage(newLang);
-      navigate(newPath);
+      router.push(newPath);
       setTimeout(() => setIsLangChanging(false), 75);
     }, 150);
   };

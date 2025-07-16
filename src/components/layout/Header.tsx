@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sun, Moon, Monitor, Menu, X } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 
 interface NavItem {
   text: string;
@@ -21,8 +22,8 @@ const Header: React.FC<HeaderProps> = ({ language, toggleLanguage, navContent, i
   const [scrollY, setScrollY] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isThemeChanging, setIsThemeChanging] = useState(false);
-  const location = useLocation();
-  const navigate = useNavigate();
+  const pathname = usePathname();
+  const router = useRouter();
 
   const handleLinkClick = (href: string) => {
     setMobileMenuOpen(false);
@@ -30,8 +31,8 @@ const Header: React.FC<HeaderProps> = ({ language, toggleLanguage, navContent, i
 
     if (href.startsWith('#')) {
       const sectionId = href.substring(1);
-      if (location.pathname !== homeUrl) {
-        navigate(homeUrl);
+      if (pathname !== homeUrl) {
+        router.push(homeUrl);
         setTimeout(() => {
           const section = document.getElementById(sectionId);
           if (section) {
@@ -46,7 +47,7 @@ const Header: React.FC<HeaderProps> = ({ language, toggleLanguage, navContent, i
       }
     } else {
       const targetUrl = language === 'es' && !href.startsWith('/es') && href.startsWith('/') ? `/es${href}` : href;
-      navigate(targetUrl);
+      router.push(targetUrl);
     }
   };
 
@@ -80,7 +81,7 @@ const Header: React.FC<HeaderProps> = ({ language, toggleLanguage, navContent, i
     }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link to={language === 'es' ? '/es' : '/'} onClick={scrollToTop} className="flex items-center group">
+          <Link href={language === 'es' ? '/es' : '/'} onClick={scrollToTop} className="flex items-center group">
             <img 
               src="/Ferrix Ventures - 281x132.svg" 
               alt="Ferrix Ventures Logo" 
