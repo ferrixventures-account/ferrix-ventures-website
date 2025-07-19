@@ -1,10 +1,11 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import { useLanguage } from '@/hooks/useLanguage';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { ShieldCheck, Target, Zap } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Briefcase, Zap, Target, ShieldCheck, BarChart, Building, Handshake, Mail, Linkedin, Scale, Rocket, Gem } from 'lucide-react';
 import FeatureCard from '@/components/ui/FeatureCard';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -19,7 +20,8 @@ type ThesisPageClientProps = {
 
 const ThesisPageClient: React.FC<ThesisPageClientProps> = ({ lang, content, navContent, footerContent }) => {
   const { language, toggleLanguage, isLangChanging } = useLanguage(lang);
-  const advantageIcons = [Target, Zap, ShieldCheck];
+  const advantageIcons = [Briefcase, Zap, Target];
+  const assetClassIcons = { vc: Rocket, ferrix: Gem, pe: Scale };
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -129,17 +131,11 @@ const ThesisPageClient: React.FC<ThesisPageClientProps> = ({ lang, content, navC
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light mb-12">{content.advantage.description}</p>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    {content.advantage.cards.map((card: { title: string; description: string }, index: number) => {
-                        const Icon = advantageIcons[index];
+                    {content.advantage.cards.map((card, index) => {
                         return (
                             <Card key={index} className="bg-muted">
                                 <CardHeader>
-                                    <div className="flex items-center gap-4">
-                                        <div className="bg-primary/10 p-3 rounded-full">
-                                            <Icon className="w-6 h-6 text-primary" />
-                                        </div>
-                                        <CardTitle className="text-xl font-bold">{card.title}</CardTitle>
-                                    </div>
+                                    <CardTitle className="text-xl font-bold">{card.title}</CardTitle>
                                 </CardHeader>
                                 <CardContent>
                                     <p className="text-muted-foreground font-light">{card.description}</p>
@@ -152,113 +148,131 @@ const ThesisPageClient: React.FC<ThesisPageClientProps> = ({ lang, content, navC
         </section>
 
         {/* Asset Class Section */}
-        <section className="py-24 px-6 bg-background">
+        <section className="py-24 px-6 bg-muted">
             <div className="container mx-auto px-6">
                 <div className="text-center max-w-4xl mx-auto">
                     <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4 tracking-tight">{content.assetClass.title}</h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light mb-12">{content.assetClass.description}</p>
                 </div>
-                <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-12 text-center">
-                    <Card className="bg-muted">
-                        <CardHeader>
-                            <CardTitle>{content.assetClass.cards.vc.title}</CardTitle>
-                        </CardHeader>
-                        <CardContent className="space-y-2">
-                            <p><span className="font-semibold">Risk:</span> {content.assetClass.cards.vc.risk}</p>
-                            <p><span className="font-semibold">Returns:</span> {content.assetClass.cards.vc.returns}</p>
-                            <p><span className="font-semibold">Model:</span> {content.assetClass.cards.vc.model}</p>
-                        </CardContent>
-                    </Card>
-                    <Card className="bg-primary text-primary-foreground border-2 border-primary-foreground/50 shadow-lg">
-                        <CardHeader>
-                            <CardTitle>{content.assetClass.cards.ferrix.title}</CardTitle>
-                        </CardHeader>
-                        <CardContent className="space-y-2">
-                            <p><span className="font-semibold">Risk:</span> {content.assetClass.cards.ferrix.risk}</p>
-                            <p><span className="font-semibold">Returns:</span> {content.assetClass.cards.ferrix.returns}</p>
-                            <p><span className="font-semibold">Model:</span> {content.assetClass.cards.ferrix.model}</p>
-                        </CardContent>
-                    </Card>
-                    <Card className="bg-muted">
-                        <CardHeader>
-                            <CardTitle>{content.assetClass.cards.pe.title}</CardTitle>
-                        </CardHeader>
-                        <CardContent className="space-y-2">
-                            <p><span className="font-semibold">Risk:</span> {content.assetClass.cards.pe.risk}</p>
-                            <p><span className="font-semibold">Returns:</span> {content.assetClass.cards.pe.returns}</p>
-                            <p><span className="font-semibold">Model:</span> {content.assetClass.cards.pe.model}</p>
-                        </CardContent>
-                    </Card>
+                <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-12">
+                    {Object.entries(content.assetClass.cards).map(([key, card]) => {
+                        const isFerrix = key === 'ferrix';
+                        return (
+                            <Card key={key} className={`${isFerrix ? 'bg-primary text-primary-foreground border-2 border-primary-foreground/50 shadow-lg' : 'bg-background'}`}>
+                                <CardHeader>
+                                    <CardTitle className="text-xl font-bold">{card.title}</CardTitle>
+                                </CardHeader>
+                                <CardContent className="space-y-2 text-left font-light text-sm">
+                                    <p><span className="font-semibold">Risk:</span> {card.risk}</p>
+                                    <p><span className="font-semibold">Returns:</span> {card.returns}</p>
+                                    <p><span className="font-semibold">Model:</span> {card.model}</p>
+                                </CardContent>
+                            </Card>
+                        );
+                    })}
                 </div>
             </div>
         </section>
 
         {/* Investment Path Section */}
-        <section className="py-24 px-6 bg-muted">
-            <div className="container mx-auto px-6">
-                <div className="text-center max-w-4xl mx-auto">
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4 tracking-tight">{content.investmentPath.title}</h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light mb-12">{content.investmentPath.description}</p>
-                </div>
-                <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mt-12">
-                    {content.investmentPath.tracks.map((track: { title: string; target: string; equity: string; returns: string; profile: string; }, index: number) => (
-                        <Card key={index} className="bg-background">
-                            <CardHeader>
-                                <CardTitle>{track.title}</CardTitle>
-                            </CardHeader>
-                            <CardContent className="space-y-2">
-                                <p><span className="font-semibold">Target:</span> {track.target}</p>
-                                <p><span className="font-semibold">Equity:</span> {track.equity}</p>
-                                <p><span className="font-semibold">Returns:</span> {track.returns}</p>
-                                <p><span className="font-semibold">Profile:</span> {track.profile}</p>
-                            </CardContent>
-                        </Card>
-                    ))}
-                </div>
-                <div className="max-w-6xl mx-auto mt-12 grid md:grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div>
-                        <h3 className="text-2xl font-bold mb-4">{content.investmentPath.nextSteps.steps.title}</h3>
-                        <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                            {content.investmentPath.nextSteps.steps.items.map((item: string, index: number) => (
-                                <li key={index}>{item}</li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 className="text-2xl font-bold mb-4">{content.investmentPath.nextSteps.minimums.title}</h3>
-                        <ul className="space-y-2 text-muted-foreground">
-                            {content.investmentPath.nextSteps.minimums.items.map((item: { investor: string; amount: string; }, index: number) => (
-                                <li key={index}><span className="font-semibold">{item.investor}:</span> {item.amount}</li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
+        <section className="py-24 px-6 bg-white dark:bg-black">
+          <div className="container mx-auto px-6">
+            <div className="text-center max-w-4xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4 tracking-tight">{content.investmentPath.title}</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light mb-12">{content.investmentPath.description}</p>
             </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-12">
+              {content.investmentPath.tracks.map((track: any, index: number) => {
+                const Icon = track.title.includes('Acquisition') ? Building : Handshake;
+                const isAcquisition = track.title.includes('Acquisition');
+                return (
+                  <Card key={index} className="bg-background">
+                    <CardHeader>
+                      <CardTitle className="text-xl font-bold">
+                        {track.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-2 font-light text-sm">
+                      <p><span className="font-semibold">Target:</span> {track.target}</p>
+                      <p><span className="font-semibold">Equity:</span> {track.equity}</p>
+                      <p><span className="font-semibold">Returns:</span> {track.returns}</p>
+                      <p className={`pt-2 ${isAcquisition ? 'text-primary-foreground/80' : 'text-muted-foreground'}`}>{track.profile}</p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+            <div className="mt-12 max-w-5xl mx-auto">
+              <h3 className="text-3xl font-bold text-center mb-8">{content.investmentPath.nextSteps.title}</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <Card className="bg-background">
+                  <CardHeader>
+                    <CardTitle>{content.investmentPath.nextSteps.steps.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="list-decimal list-inside space-y-2 font-light">
+                      {content.investmentPath.nextSteps.steps.items.map((step: string, i: number) => (
+                        <li key={i}>{step}</li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+                <Card className="bg-background">
+                  <CardHeader>
+                    <CardTitle>{content.investmentPath.nextSteps.minimums.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3 font-light">
+                      {content.investmentPath.nextSteps.minimums.items.map((item: { investor: string; amount: string }, i: number) => (
+                        <li key={i} className="flex justify-between border-b pb-2">
+                          <span>{item.investor}</span>
+                          <span className="font-semibold">{item.amount}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Contact Section */}
-        <section className="py-24 px-6 bg-background">
-            <div className="container mx-auto px-6 text-center">
-                <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4 tracking-tight">{content.contact.title}</h2>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light mb-12">{content.contact.description}</p>
-                <div className="max-w-md mx-auto">
-                    <Card className="bg-muted text-left">
-                        <CardHeader>
-                            <CardTitle>{content.contact.card.name}</CardTitle>
-                            <CardDescription>{content.contact.card.title}</CardDescription>
-                        </CardHeader>
-                        <CardContent className="space-y-4">
-                            <a href={`mailto:${content.contact.card.email}`} className="block text-primary hover:underline">{content.contact.card.email}</a>
-                            <a href={`https://linkedin.com/in/santiagosaenzariza`} target="_blank" rel="noopener noreferrer" className="block text-primary hover:underline">{content.contact.card.linkedin}</a>
-                            <Button size="lg" className="w-full" asChild>
-                                <a href="https://calendar.app.google/SiEUYfD4xmSU61Aj7" target="_blank" rel="noopener noreferrer">
-                                    {content.contact.card.cta}
-                                </a>
-                            </Button>
-                        </CardContent>
-                    </Card>
-                </div>
+        <section className="py-24 px-6 bg-muted">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4 tracking-tight">{content.contact.title}</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light mb-12">{content.contact.description}</p>
+            <div className="mt-12 max-w-2xl mx-auto">
+              <Card className="bg-background shadow-lg text-center p-8">
+                <CardHeader className="flex flex-col items-center">
+                  <Image
+                    src="/santiago-saenz-ariza.png"
+                    alt={content.contact.card.name}
+                    width={96}
+                    height={96}
+                    className="rounded-full mb-4"
+                  />
+                  <h3 className="text-2xl font-bold">{content.contact.card.name}</h3>
+                  <p className="text-muted-foreground">{content.contact.card.title}</p>
+                </CardHeader>
+                <CardContent className="flex flex-col items-center space-y-6">
+                  <div className="flex flex-col items-center space-y-2 text-sm text-muted-foreground">
+                    <a href={`mailto:${content.contact.card.email}`} className="hover:text-primary hover:underline">
+                      {content.contact.card.email}
+                    </a>
+                    <a href={contentObj[lang].links.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:underline">
+                      {content.contact.card.linkedin}
+                    </a>
+                  </div>
+                  <Button asChild size="lg" className="mt-4 w-full sm:w-auto">
+                    <a href={contentObj[lang].links.meeting} target="_blank" rel="noopener noreferrer">
+                      {content.contact.card.cta}
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
             </div>
+          </div>
         </section>
       </main>
 

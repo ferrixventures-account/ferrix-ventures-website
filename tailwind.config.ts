@@ -8,6 +8,26 @@ const config: Config = {
     './src/components/**/*.{ts,tsx}',
     './src/content.ts',
   ],
+  safelist: [
+    {
+      pattern: /^(bg|text|border|ring)-(slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(50|100|200|300|400|500|600|700|800|900)$/,
+    },
+    {
+      pattern: /^(w|h)-(full|screen|px|0|1|2|3|4|5|6|8|10|12|16|20|24|32|40|48|56|64)$/,
+    },
+    {
+      pattern: /^(m|p)(t|b|l|r|x|y)?-(0|1|2|3|4|5|6|8|10|12|16|20|24|32|40|48|56|64)$/,
+    },
+    'text-center', 'text-left', 'text-right',
+    'grid', 'grid-cols-1', 'grid-cols-2', 'grid-cols-3', 'gap-8',
+    'md:grid-cols-1', 'md:grid-cols-2', 'lg:grid-cols-2',
+    'font-bold', 'font-extrabold', 'font-light', 'font-semibold', 'font-mono',
+    'text-lg', 'text-xl', 'text-2xl', 'text-3xl', 'text-4xl', 'text-5xl',
+    'tracking-tight', 'list-disc', 'list-inside', 'space-y-2', 'space-y-4',
+    'container', 'mx-auto', 'px-6', 'py-24', 'max-w-md', 'max-w-2xl', 'max-w-4xl', 'max-w-6xl',
+    'bg-background', 'bg-muted', 'text-foreground', 'text-muted-foreground', 'text-primary',
+    'hover:underline', 'block',
+  ],
   prefix: "",
   theme: {
     container: {
@@ -98,8 +118,8 @@ const config: Config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        'fade-in': 'fade-in 0.5s ease-out',
-        'fade-in-up': 'fade-in-up 0.5s ease-out',
+        'fade-in': 'fade-in 0.2s ease-out',
+        'fade-in-up': 'fade-in-up 0.3s ease-out',
       },
     },
   },

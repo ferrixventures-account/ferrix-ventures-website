@@ -1,5 +1,9 @@
 export const content = {
     es: {
+      links: {
+        linkedin: "https://www.linkedin.com/in/santiagosaenzariza/",
+        meeting: "https://calendar.app.google/SiEUYfD4xmSU61Aj7",
+      },
       // SEO Metadata
       meta: {
         title: "Ferrix Ventures - Venture Acceleration Studio",
@@ -280,6 +284,10 @@ Próxima Clase de Activos`,
       }
     },
     en: {
+      links: {
+        linkedin: "https://www.linkedin.com/in/santiagosaenzariza/",
+        meeting: "https://calendar.app.google/SiEUYfD4xmSU61Aj7",
+      },
       // SEO Metadata
       meta: {
         title: "Ferrix Ventures - Venture Acceleration Studio",
