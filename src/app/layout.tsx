@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Roboto_Mono } from 'next/font/google';
 import { ThemeProvider } from "@/theme/ThemeContext";
+import Script from "next/script";
 import "@/index.css";
 
 const inter = Inter({
