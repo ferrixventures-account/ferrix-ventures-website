@@ -64,7 +64,7 @@ export default function RootLayout({ children, params }: { children: React.React
       <body className={`${inter.variable} ${roboto_mono.variable} antialiased`} suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
