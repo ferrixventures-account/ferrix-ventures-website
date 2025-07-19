@@ -46,6 +46,19 @@ export default function RootLayout({ children, params }: { children: React.React
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
         <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-YSF6G98R3H"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YSF6G98R3H');
+          `}
+        </Script>
       </head>
       <body className={`${inter.variable} ${roboto_mono.variable} antialiased`} suppressHydrationWarning>
         <ThemeProvider
