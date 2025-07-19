@@ -59,14 +59,6 @@ All colors MUST be HSL.
     --border: 0 0% 18%;
     --input: 0 0% 18%;
     --ring: 0 0% 83.1%;
-    --sidebar-background: 0 0% 10%;
-    --sidebar-foreground: 0 0% 95.9%;
-    --sidebar-primary: 0 0% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 15.9%;
-    --sidebar-accent-foreground: 0 0% 95.9%;
-    --sidebar-border: 0 0% 15.9%;
-    --sidebar-ring: 0 0% 83.1%;
   }
 }
 

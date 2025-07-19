@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -32,8 +33,8 @@ const About: React.FC<AboutProps> = ({ aboutContent, ctaContent }) => {
                 <Card className="bg-muted/50 animate-fade-in-up">
           <CardHeader className="text-center flex flex-col items-center">
             <div className="w-28 h-28 rounded-full overflow-hidden bg-muted mb-6 shadow-none">
-              <img 
-                src="/Santiago Saenz Ariza.png" 
+              <Image 
+                src="/santiago-saenz-ariza.png" 
                 alt="Santiago Sáenz Ariza" 
                 className="object-cover w-full h-full rounded-full border border-border"
                 width={112}

@@ -1,12 +1,12 @@
 import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
 
 const config: Config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    './src/app/**/*.{ts,tsx}',
+    './src/components/**/*.{ts,tsx}',
+    './src/content.ts',
   ],
   prefix: "",
   theme: {
@@ -59,7 +59,8 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ["var(--font-inter)", ...fontFamily.sans],
+        mono: ["var(--font-roboto-mono)", ...fontFamily.mono],
       },
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],

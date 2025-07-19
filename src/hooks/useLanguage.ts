@@ -5,41 +5,32 @@ export const useLanguage = (forcedLanguage?: 'en' | 'es') => {
   const pathname = usePathname();
   const router = useRouter();
 
-  const getLangFromPath = (path: string): 'en' | 'es' => (path.startsWith('/es') ? 'es' : 'en');
-
-  const [language, setLanguage] = useState<'en' | 'es'>(forcedLanguage || getLangFromPath(pathname));
+  const [language, setLanguage] = useState(forcedLanguage || 'en');
   const [isLangChanging, setIsLangChanging] = useState(false);
 
   useEffect(() => {
-    const lang = forcedLanguage || getLangFromPath(pathname);
-    if (lang !== language) {
-      setLanguage(lang);
+    if (forcedLanguage && forcedLanguage !== language) {
+      setLanguage(forcedLanguage);
     }
-  }, [pathname, forcedLanguage, language]);
+  }, [forcedLanguage, language]);
 
   const toggleLanguage = () => {
     setIsLangChanging(true);
     setTimeout(() => {
       const newLang = language === 'es' ? 'en' : 'es';
       const currentPath = pathname;
-      let newPath;
 
-      if (newLang === 'es') {
-        if (currentPath.startsWith('/es')) {
-          newPath = currentPath; // Already in Spanish
-        } else {
-          newPath = currentPath === '/' ? '/es' : `/es${currentPath}`;
-        }
-      } else {
-        if (currentPath.startsWith('/es')) {
-          newPath = currentPath.substring(3) || '/'; // Go to English version
-        } else {
-          newPath = currentPath; // Already in English
-        }
+      const pathSegments = currentPath.split('/').filter(Boolean);
+
+      // Remove the current language segment if it exists
+      if (pathSegments[0] === language) {
+        pathSegments.shift();
       }
+
+      const newPath = `/${newLang}/${pathSegments.join('/')}`;
       
       setLanguage(newLang);
-      router.push(newPath);
+      router.push(newPath, { scroll: false });
       setTimeout(() => setIsLangChanging(false), 75);
     }, 150);
   };

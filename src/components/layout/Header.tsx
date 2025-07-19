@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sun, Moon, Monitor, Menu, X } from 'lucide-react';
-import { useTheme } from 'next-themes';
+import { useTheme } from '@/theme/ThemeContext';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 
 interface NavItem {
@@ -22,8 +23,14 @@ const Header: React.FC<HeaderProps> = ({ language, toggleLanguage, navContent, i
   const [scrollY, setScrollY] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isThemeChanging, setIsThemeChanging] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
+
+  // Prevent hydration mismatch by only rendering theme-dependent UI after mount
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleLinkClick = (href: string) => {
     setMobileMenuOpen(false);
@@ -67,10 +74,10 @@ const Header: React.FC<HeaderProps> = ({ language, toggleLanguage, navContent, i
   const toggleTheme = () => {
     setIsThemeChanging(true);
     setTimeout(() => {
-      const themes = ['system', 'light', 'dark'];
-      const currentThemeIndex = themes.indexOf(theme || 'system');
+      const themes: ('system' | 'light' | 'dark')[] = ['system', 'light', 'dark'];
+      const currentThemeIndex = themes.indexOf((theme as 'system' | 'light' | 'dark') || 'system');
       const nextTheme = themes[(currentThemeIndex + 1) % themes.length];
-      setTheme(nextTheme);
+      setTheme(nextTheme as 'system' | 'light' | 'dark');
       setTimeout(() => setIsThemeChanging(false), 75);
     }, 150);
   };
@@ -82,22 +89,29 @@ const Header: React.FC<HeaderProps> = ({ language, toggleLanguage, navContent, i
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href={language === 'es' ? '/es' : '/'} onClick={scrollToTop} className="flex items-center group">
-            <img 
+            <Image 
               src="/Ferrix Ventures - 281x132.svg" 
               alt="Ferrix Ventures Logo" 
+              width={140} 
+              height={66} 
               className="h-10 w-auto transition-transform duration-300 group-hover:scale-110 dark:invert"
+              priority
             />
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
             {navContent.map((item) => (
-              <button
+              <Link
                 key={item.text}
-                onClick={() => handleLinkClick(item.href)}
-                className="text-sm font-mono text-muted-foreground hover:text-foreground transition-colors duration-300 bg-transparent border-none p-0 cursor-pointer"
+                href={item.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick(item.href);
+                }}
+                className="text-sm font-mono text-muted-foreground hover:text-foreground transition-colors duration-300"
               >
                 {item.text}
-              </button>
+              </Link>
             ))}
           </nav>
 
@@ -110,9 +124,14 @@ const Header: React.FC<HeaderProps> = ({ language, toggleLanguage, navContent, i
 
             <Button variant="ghost" size="icon" onClick={toggleTheme} className="relative w-9 h-9">
               <span className="sr-only">Toggle theme</span>
-              {theme === 'light' && <Sun className={`absolute h-[1.2rem] w-[1.2rem] transition-all duration-150 ${isThemeChanging ? 'rotate-90 scale-0 opacity-0' : 'rotate-0 scale-100 opacity-100'}`} />}
-              {theme === 'dark' && <Moon className={`absolute h-[1.2rem] w-[1.2rem] transition-all duration-150 ${isThemeChanging ? 'rotate-90 scale-0 opacity-0' : 'rotate-0 scale-100 opacity-100'}`} />}
-              {theme === 'system' && <Monitor className={`absolute h-[1.2rem] w-[1.2rem] transition-all duration-150 ${isThemeChanging ? 'rotate-90 scale-0 opacity-0' : 'rotate-0 scale-100 opacity-100'}`} />}
+              {mounted && (
+                <>
+                  {theme === 'light' && <Sun className={`absolute h-[1.2rem] w-[1.2rem] transition-all duration-150 ${isThemeChanging ? 'rotate-90 scale-0 opacity-0' : 'rotate-0 scale-100 opacity-100'}`} />}
+                  {theme === 'dark' && <Moon className={`absolute h-[1.2rem] w-[1.2rem] transition-all duration-150 ${isThemeChanging ? 'rotate-90 scale-0 opacity-0' : 'rotate-0 scale-100 opacity-100'}`} />}
+                  {theme === 'system' && <Monitor className={`absolute h-[1.2rem] w-[1.2rem] transition-all duration-150 ${isThemeChanging ? 'rotate-90 scale-0 opacity-0' : 'rotate-0 scale-100 opacity-100'}`} />}
+                </>
+              )}
+              {!mounted && <Monitor className="absolute h-[1.2rem] w-[1.2rem]" />}
             </Button>
           </div>
 
@@ -132,13 +151,17 @@ const Header: React.FC<HeaderProps> = ({ language, toggleLanguage, navContent, i
         <div className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-sm shadow-lg animate-fade-in-down">
           <nav className="flex flex-col items-center space-y-4 py-8">
             {navContent.map((item) => (
-              <button
+              <Link
                 key={item.text}
-                onClick={() => handleLinkClick(item.href)}
-                className="text-lg font-mono text-muted-foreground hover:text-foreground transition-colors duration-300 bg-transparent border-none p-0 cursor-pointer"
+                href={item.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick(item.href);
+                }}
+                className="text-lg font-mono text-muted-foreground hover:text-foreground transition-colors duration-300"
               >
                 {item.text}
-              </button>
+              </Link>
             ))}
             <div className="flex items-center space-x-4 pt-4">
               <Button variant="ghost" size="icon" onClick={toggleLanguage} className="text-base font-mono relative w-10 h-10">
@@ -148,9 +171,14 @@ const Header: React.FC<HeaderProps> = ({ language, toggleLanguage, navContent, i
               </Button>
               <Button variant="ghost" size="icon" onClick={toggleTheme} className="relative w-10 h-10">
                 <span className="sr-only">Toggle theme</span>
-                {theme === 'light' && <Sun className={`absolute h-[1.5rem] w-[1.5rem] transition-all duration-150 ${isThemeChanging ? 'rotate-90 scale-0 opacity-0' : 'rotate-0 scale-100 opacity-100'}`} />}
-                {theme === 'dark' && <Moon className={`absolute h-[1.5rem] w-[1.5rem] transition-all duration-150 ${isThemeChanging ? 'rotate-90 scale-0 opacity-0' : 'rotate-0 scale-100 opacity-100'}`} />}
-                {theme === 'system' && <Monitor className={`absolute h-[1.5rem] w-[1.5rem] transition-all duration-150 ${isThemeChanging ? 'rotate-90 scale-0 opacity-0' : 'rotate-0 scale-100 opacity-100'}`} />}
+                {mounted && (
+                  <>
+                    {theme === 'light' && <Sun className={`absolute h-[1.5rem] w-[1.5rem] transition-all duration-150 ${isThemeChanging ? 'rotate-90 scale-0 opacity-0' : 'rotate-0 scale-100 opacity-100'}`} />}
+                    {theme === 'dark' && <Moon className={`absolute h-[1.5rem] w-[1.5rem] transition-all duration-150 ${isThemeChanging ? 'rotate-90 scale-0 opacity-0' : 'rotate-0 scale-100 opacity-100'}`} />}
+                    {theme === 'system' && <Monitor className={`absolute h-[1.5rem] w-[1.5rem] transition-all duration-150 ${isThemeChanging ? 'rotate-90 scale-0 opacity-0' : 'rotate-0 scale-100 opacity-100'}`} />}
+                  </>
+                )}
+                {!mounted && <Monitor className="absolute h-[1.5rem] w-[1.5rem]" />}
               </Button>
             </div>
           </nav>

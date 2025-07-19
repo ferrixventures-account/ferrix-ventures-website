@@ -1,21 +1,5 @@
-import type { Metadata } from "next";
-import "@/index.css";
+import React from 'react';
 
-export const metadata: Metadata = {
-  title: "Ferrix Ventures",
-  description: "Pioneering the future of deep-tech and hard-tech innovations.",
-};
-
-export default function RootLayout({
-  children,
-  params,
-}: {
-  children: React.ReactNode;
-  params: { lang: string };
-}) {
-  return (
-    <html lang={params.lang}>
-      <body>{children}</body>
-    </html>
-  );
+export default function LangLayout({ children }: { children: React.ReactNode }) {
+  return <>{children}</>;
 }

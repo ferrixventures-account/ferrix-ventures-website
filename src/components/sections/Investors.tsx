@@ -10,9 +10,10 @@ interface InvestorsProps {
     investorSubDesc: string;
     investorButton: string;
   };
+  language: 'en' | 'es';
 }
 
-const Investors: React.FC<InvestorsProps> = ({ content }) => {
+const Investors: React.FC<InvestorsProps> = ({ content, language }) => {
   return (
     <section id="contact" className="py-24 px-6 bg-black dark:bg-white">
       <div className="container mx-auto max-w-4xl">
@@ -29,7 +30,7 @@ const Investors: React.FC<InvestorsProps> = ({ content }) => {
             {content.investorDesc}
           </p>
           <div className="mt-8">
-            <Link href="/thesis">
+            <Link href={`/${language}/thesis`}>
               <Button className="font-mono text-lg px-8 py-6 bg-white text-black dark:bg-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-800">
                 {content.investorButton}
               </Button>
