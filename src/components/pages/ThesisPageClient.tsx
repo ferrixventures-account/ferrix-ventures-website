@@ -6,6 +6,15 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Briefcase, Zap, Target, ShieldCheck, BarChart, Building, Handshake, Mail, Linkedin, Scale, Rocket, Gem } from 'lucide-react';
+
+interface InvestmentTrack {
+  title: string;
+  target: string;
+  equity: string;
+  returns: string;
+  profile: string;
+}
+
 import FeatureCard from '@/components/ui/FeatureCard';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -182,7 +191,7 @@ const ThesisPageClient: React.FC<ThesisPageClientProps> = ({ lang, content, navC
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light mb-12">{content.investmentPath.description}</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-12">
-              {content.investmentPath.tracks.map((track: any, index: number) => {
+              {content.investmentPath.tracks.map((track: InvestmentTrack, index: number) => {
                 const Icon = track.title.includes('Acquisition') ? Building : Handshake;
                 const isAcquisition = track.title.includes('Acquisition');
                 return (
