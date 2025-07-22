@@ -21,6 +21,21 @@
       "static/chunks/main-app.js",
       "static/chunks/app/[lang]/not-found.js"
     ],
+    "/[lang]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lang]/page.js"
+    ],
+    "/[lang]/acceleration/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lang]/acceleration/page.js"
+    ],
+    "/[lang]/acquisitions/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lang]/acquisitions/page.js"
+    ],
     "/[lang]/thesis/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",

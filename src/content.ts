@@ -20,9 +20,9 @@ export const content = {
 
       // Header
       nav: [
-        { text: 'Oportunidad', href: '#opportunity' },
-        { text: 'Metodología', href: '#redefining' },
         { text: 'Nosotros', href: '#about' },
+        { text: 'Aceleración', href: '/acceleration' },
+        { text: 'Adquisiciones', href: '/acquisitions' },
         { text: 'Invierte', href: '/thesis' },
       ],
       
@@ -330,9 +330,9 @@ Próxima Clase de Activos`,
       },
       // Header
       nav: [
-        { text: 'Opportunity', href: '#opportunity' },
-        { text: 'Methodology', href: '#redefining' },
         { text: 'About', href: '#about' },
+        { text: 'Acceleration', href: '/acceleration' },
+        { text: 'Acquisitions', href: '/acquisitions' },
         { text: 'Invest', href: '/thesis' },
       ],
 
