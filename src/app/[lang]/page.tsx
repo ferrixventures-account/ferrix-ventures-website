@@ -5,8 +5,8 @@ import { Metadata } from 'next';
 
 
 
-export async function generateMetadata({ params }: { params: { lang: 'en' | 'es' } }): Promise<Metadata> {
-  const { lang } = params;
+export async function generateMetadata({ params }: { params: Promise<{ lang: 'en' | 'es' }> }): Promise<Metadata> {
+  const { lang } = await params;
   // Ensure we have a valid language, fallback to 'en' if not found
   const validLang = lang && (lang === 'en' || lang === 'es') ? lang : 'en';
   const c = content[validLang];
@@ -85,8 +85,8 @@ export async function generateMetadata({ params }: { params: { lang: 'en' | 'es'
   };
 }
 
-export default function HomePage({ params }: { params: { lang: 'en' | 'es' } }) {
-  const { lang } = params;
+export default async function HomePage({ params }: { params: Promise<{ lang: 'en' | 'es' }> }) {
+  const { lang } = await params;
   // Ensure we have a valid language, fallback to 'en' if not found
   const validLang = lang && (lang === 'en' || lang === 'es') ? lang : 'en';
   const c = content[validLang];
