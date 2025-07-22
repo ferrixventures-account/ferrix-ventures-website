@@ -3,11 +3,10 @@ import { content } from '@/content';
 import ThesisPageClient from '@/components/pages/ThesisPageClient';
 import { Metadata } from 'next';
 
-type Props = {
-  params: { lang: 'en' | 'es' };
-};
 
-export async function generateMetadata({ params: { lang } }: Props): Promise<Metadata> {
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: 'en' | 'es' }> }): Promise<Metadata> {
+  const { lang } = await params;
   // Ensure we have a valid language, fallback to 'en' if not found
   const validLang = (lang && content[lang]) ? lang : 'en';
   const c = content[validLang];
@@ -73,13 +72,14 @@ export async function generateMetadata({ params: { lang } }: Props): Promise<Met
   };
 }
 
-const ThesisPage: React.FC<Props> = ({ params }) => {
+const ThesisPage = async ({ params }: { params: Promise<{ lang: 'en' | 'es' }> }) => {
+  const { lang } = await params;
   // Ensure we have a valid language, fallback to 'en' if not found
-  const validLang = (params.lang && content[params.lang]) ? params.lang : 'en';
+  const validLang = (lang && content[lang]) ? lang : 'en';
   const c = content[validLang];
 
   if (!c || !c.thesis) {
-    console.error('Thesis content not found for language:', params.lang, 'Available languages:', Object.keys(content));
+    console.error('Thesis content not found for language:', lang, 'Available languages:', Object.keys(content));
     return <div>Content not found</div>;
   }
 
@@ -110,7 +110,7 @@ const ThesisPage: React.FC<Props> = ({ params }) => {
             dateModified: new Date().toISOString().split('T')[0],
             mainEntityOfPage: {
               '@type': 'WebPage',
-              '@id': `https://ferrixventures.com${params.lang === 'es' ? '/es' : ''}/thesis`,
+              '@id': `https://ferrixventures.com${lang === 'es' ? '/es' : ''}/thesis`,
             },
           }),
         }}
