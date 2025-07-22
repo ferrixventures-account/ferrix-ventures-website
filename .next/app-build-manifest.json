@@ -1,6 +1,6 @@
 {
-  "pages": {
-    "/layout": [
+  "pages": {}
+}  "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
@@ -20,11 +20,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/[lang]/not-found.js"
-    ],
-    "/[lang]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[lang]/page.js"
     ],
     "/[lang]/thesis/page": [
       "static/chunks/webpack.js",
