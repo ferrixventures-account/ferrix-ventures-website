@@ -3,13 +3,12 @@ import { content } from '@/content';
 import HomePageClient from '@/components/pages/HomePageClient';
 import { Metadata } from 'next';
 
-type Props = {
-  params: { lang: 'en' | 'es' };
-};
 
-export async function generateMetadata({ params: { lang } }: Props): Promise<Metadata> {
+
+export async function generateMetadata({ params }: { params: { lang: 'en' | 'es' } }): Promise<Metadata> {
+  const { lang } = params;
   // Ensure we have a valid language, fallback to 'en' if not found
-  const validLang = (lang && content[lang]) ? lang : 'en';
+  const validLang = lang && (lang === 'en' || lang === 'es') ? lang : 'en';
   const c = content[validLang];
   
   if (!c || !c.meta) {
@@ -86,13 +85,14 @@ export async function generateMetadata({ params: { lang } }: Props): Promise<Met
   };
 }
 
-const HomePage: React.FC<Props> = ({ params }) => {
+export default function HomePage({ params }: { params: { lang: 'en' | 'es' } }) {
+  const { lang } = params;
   // Ensure we have a valid language, fallback to 'en' if not found
-  const validLang = (params.lang && content[params.lang]) ? params.lang : 'en';
+  const validLang = lang && (lang === 'en' || lang === 'es') ? lang : 'en';
   const c = content[validLang];
   
   if (!c) {
-    console.error('Content not found for language:', params.lang, 'Available languages:', Object.keys(content));
+    console.error('Content not found for language:', lang, 'Available languages:', Object.keys(content));
     return <div>Content not found</div>;
   }
 
@@ -132,6 +132,4 @@ const HomePage: React.FC<Props> = ({ params }) => {
       />
     </>
   );
-};
-
-export default HomePage;
+}
