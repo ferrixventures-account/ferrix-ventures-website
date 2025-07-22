@@ -35,8 +35,8 @@ export const viewport = {
   maximumScale: 5,
 };
 
-export default function RootLayout({ children, params }: { children: React.ReactNode; params: { lang: string } }) {
-  const lang = params?.lang || 'en';
+export default async function RootLayout({ children, params }: { children: React.ReactNode; params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
   
   return (
     <html lang={lang} suppressHydrationWarning>
