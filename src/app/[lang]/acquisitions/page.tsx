@@ -58,47 +58,34 @@ const AcquisitionsPage = ({ lang }: { lang: 'en' | 'es' }) => {
         ]
       },
       models: {
-        title: 'Partnership Models',
-        subtitle: 'Choose the path that aligns with your goals and timeline',
+        title: 'Our Investment Tracks',
+        subtitle: 'We offer two distinct paths for partnership, tailored to your company’s scale and your personal goals.',
         options: [
           {
-            name: 'Strategic Exit',
-            description: 'Ready to transition out? We acquire your business while preserving its legacy.',
+            name: 'Partnership Fund',
+            description: 'For established businesses looking for a strategic partner to accelerate growth while retaining significant ownership.',
             features: [
-              'Full business acquisition',
-              'Competitive valuation based on potential',
-              'Smooth transition planning',
-              'Legacy preservation commitment',
-              'Optional ongoing advisory role'
+              'Targeting businesses with $5M - $50M in revenue',
+              'We acquire a 20-49% equity stake',
+              'You remain in control, leading the business day-to-day',
+              'Access to our capital, technology, and operational expertise',
+              'Focused on long-term, sustainable growth'
             ],
-            ideal: 'Perfect for founders ready to retire or pursue new ventures',
-            badge: 'Full Exit'
+            ideal: 'For owners who want to de-risk, take some chips off the table, and gain a powerful growth partner.',
+            badge: 'Growth Equity'
           },
           {
-            name: 'Growth Partnership',
-            description: 'Stay involved while we provide capital and expertise to scale together.',
+            name: 'Acquisition Fund',
+            description: 'For business owners ready for a full or majority exit, ensuring your legacy is protected and amplified.',
             features: [
-              'Minority or majority partnership',
-              'Shared decision-making',
-              'Founder remains actively involved',
-              'Accelerated growth initiatives',
-              'Profit sharing and equity upside'
+              'Targeting businesses with $10M - $100M in revenue',
+              'We acquire a 50-100% equity stake',
+              'Flexible transition for the founder (stay on or exit)',
+              'Commitment to preserving your company culture and brand',
+              'A straightforward, efficient process to acquisition'
             ],
-            ideal: 'Ideal for founders who want to scale but need capital and expertise',
-            badge: 'Partnership'
-          },
-          {
-            name: 'Operational Alliance',
-            description: 'Keep full ownership while we provide strategic guidance and resources.',
-            features: [
-              'Strategic advisory services',
-              'Access to our technology stack',
-              'Operational consulting',
-              'Network and partnership opportunities',
-              'Performance-based compensation'
-            ],
-            ideal: 'Great for businesses that want guidance without giving up equity',
-            badge: 'Advisory'
+            ideal: 'For founders planning retirement, seeking a new venture, or wanting to secure their financial future.',
+            badge: 'Full Acquisition'
           }
         ]
       },
@@ -107,12 +94,12 @@ const AcquisitionsPage = ({ lang }: { lang: 'en' | 'es' }) => {
         subtitle: 'We partner with businesses that have strong fundamentals and growth potential',
         requirements: [
           {
-            category: 'Financial Health',
+            category: 'Financial Profile',
             items: [
-              '$500K+ annual revenue',
-              'Positive cash flow or clear path to profitability',
-              'Consistent revenue growth or strong market position',
-              'Clean financial records'
+              'Annual Revenue: $5M - $100M',
+              'Strong, predictable cash flow',
+              'History of profitability',
+              'Based in the United States'
             ]
           },
           {
@@ -169,7 +156,6 @@ const AcquisitionsPage = ({ lang }: { lang: 'en' | 'es' }) => {
         title: 'Ready to Explore Your Options?',
         description: 'Every successful business reaches a point where the next chapter requires new resources, expertise, or capital. Let\'s discuss how we can help you achieve your goals.',
         primaryButton: 'Schedule Confidential Discussion',
-        secondaryButton: 'Download Partnership Guide',
         note: 'All conversations are confidential and non-binding. No obligation to proceed.'
       }
     },
@@ -217,47 +203,34 @@ const AcquisitionsPage = ({ lang }: { lang: 'en' | 'es' }) => {
         ]
       },
       models: {
-        title: 'Modelos de Sociedad',
-        subtitle: 'Elige el camino que se alinee con tus objetivos y cronograma',
+        title: 'Nuestras Vías de Inversión',
+        subtitle: 'Ofrecemos dos caminos distintos para asociarnos, diseñados según la escala de tu empresa y tus metas personales.',
         options: [
           {
-            name: 'Salida Estratégica',
-            description: '¿Listo para hacer la transición? Adquirimos tu negocio mientras preservamos su legado.',
+            name: 'Fondo de Asociación',
+            description: 'Para empresas establecidas que buscan un socio estratégico para acelerar el crecimiento mientras retienen una participación significativa.',
             features: [
-              'Adquisición completa del negocio',
-              'Valuación competitiva basada en potencial',
-              'Planificación de transición suave',
-              'Compromiso de preservación del legado',
-              'Rol de asesoría opcional continuo'
+              'Dirigido a empresas con ingresos de $5M - $50M',
+              'Adquirimos una participación del 20-49%',
+              'Tú mantienes el control, liderando el negocio día a día',
+              'Acceso a nuestro capital, tecnología y experiencia operativa',
+              'Enfocado en un crecimiento sostenible a largo plazo'
             ],
-            ideal: 'Perfecto para fundadores listos para retirarse o perseguir nuevas empresas',
-            badge: 'Salida Completa'
+            ideal: 'Para dueños que quieren reducir riesgos, liquidar parte de su participación y ganar un socio de crecimiento poderoso.',
+            badge: 'Capital de Crecimiento'
           },
           {
-            name: 'Sociedad de Crecimiento',
-            description: 'Mantente involucrado mientras proporcionamos capital y experiencia para escalar juntos.',
+            name: 'Fondo de Adquisición',
+            description: 'Para dueños de negocios listos para una salida total o mayoritaria, asegurando que su legado sea protegido y amplificado.',
             features: [
-              'Sociedad minoritaria o mayoritaria',
-              'Toma de decisiones compartida',
-              'Fundador permanece activamente involucrado',
-              'Iniciativas de crecimiento acelerado',
-              'Participación en ganancias y equity'
+              'Dirigido a empresas con ingresos de $10M - $100M',
+              'Adquirimos una participación del 50-100%',
+              'Transición flexible para el fundador (puede continuar o salir)',
+              'Compromiso de preservar la cultura y marca de tu empresa',
+              'Un proceso de adquisición directo y eficiente'
             ],
-            ideal: 'Ideal para fundadores que quieren escalar pero necesitan capital y experiencia',
-            badge: 'Sociedad'
-          },
-          {
-            name: 'Alianza Operacional',
-            description: 'Mantén la propiedad completa mientras proporcionamos orientación estratégica y recursos.',
-            features: [
-              'Servicios de asesoría estratégica',
-              'Acceso a nuestro stack tecnológico',
-              'Consultoría operacional',
-              'Oportunidades de red y sociedad',
-              'Compensación basada en rendimiento'
-            ],
-            ideal: 'Excelente para negocios que quieren orientación sin ceder equity',
-            badge: 'Asesoría'
+            ideal: 'Para fundadores que planean su retiro, buscan un nuevo proyecto o quieren asegurar su futuro financiero.',
+            badge: 'Adquisición Completa'
           }
         ]
       },
@@ -266,12 +239,12 @@ const AcquisitionsPage = ({ lang }: { lang: 'en' | 'es' }) => {
         subtitle: 'Nos asociamos con negocios que tienen fundamentos sólidos y potencial de crecimiento',
         requirements: [
           {
-            category: 'Salud Financiera',
+            category: 'Perfil Financiero',
             items: [
-              '$500K+ ingresos anuales',
-              'Flujo de caja positivo o camino claro a rentabilidad',
-              'Crecimiento consistente de ingresos o posición fuerte en el mercado',
-              'Registros financieros limpios'
+              'Ingresos Anuales: $5M - $100M',
+              'Flujo de caja fuerte y predecible',
+              'Historial de rentabilidad',
+              'Con sede en Estados Unidos'
             ]
           },
           {
@@ -328,7 +301,6 @@ const AcquisitionsPage = ({ lang }: { lang: 'en' | 'es' }) => {
         title: '¿Listo para Explorar tus Opciones?',
         description: 'Todo negocio exitoso llega a un punto donde el próximo capítulo requiere nuevos recursos, experiencia o capital. Discutamos cómo podemos ayudarte a lograr tus objetivos.',
         primaryButton: 'Programar Discusión Confidencial',
-        secondaryButton: 'Descargar Guía de Sociedad',
         note: 'Todas las conversaciones son confidenciales y sin compromiso. No hay obligación de proceder.'
       }
     }
@@ -389,7 +361,7 @@ const AcquisitionsPage = ({ lang }: { lang: 'en' | 'es' }) => {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">{pageContent.models.title}</h2>
             <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">{pageContent.models.subtitle}</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {pageContent.models.options.map((model, index) => (
               <Card key={index} className="p-8 relative">
                 <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -472,9 +444,6 @@ const AcquisitionsPage = ({ lang }: { lang: 'en' | 'es' }) => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                 {pageContent.cta.primaryButton}
-              </Button>
-              <Button size="lg" variant="outline">
-                {pageContent.cta.secondaryButton}
               </Button>
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-400">{pageContent.cta.note}</p>
