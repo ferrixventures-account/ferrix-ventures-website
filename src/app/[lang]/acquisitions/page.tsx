@@ -3,11 +3,8 @@ import { Metadata } from 'next';
 import { content } from '@/content';
 import AcquisitionsPageClient from '@/components/pages/AcquisitionsPageClient';
 
-type Props = {
-  params: { lang: 'en' | 'es' };
-};
-
-export async function generateMetadata({ params: { lang } }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ lang: 'en' | 'es' }> }): Promise<Metadata> {
+  const { lang } = await params;
   const c = content[lang]?.acquisitions.meta || content.en.acquisitions.meta;
   const baseUrl = 'https://ferrixventures.com';
 

@@ -1,4 +1,3 @@
 {
-  "/[lang]/acceleration/page": "app/[lang]/acceleration/page.js",
   "/[lang]/page": "app/[lang]/page.js"
 }
