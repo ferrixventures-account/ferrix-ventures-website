@@ -158,6 +158,127 @@ Próxima Clase de Activos`,
         rights: 'Todos los derechos reservados.'
       },
 
+      // Acquisitions Page
+      acquisitions: {
+        meta: {
+          title: "Adquisiciones y Alianzas - Ferrix Ventures",
+          description: "Asóciate con Ferrix Ventures para una salida estratégica o para escalar tu negocio. Ofrecemos valoraciones justas, decisiones rápidas y un enfoque amigable para fundadores.",
+          keywords: ["adquisición de empresas", "alianza estratégica", "estrategia de salida", "escalar negocio", "capital de crecimiento", "salida de fundador"]
+        },
+        hero: {
+          headline: '¿Listo para una Salida o Escalar Juntos?',
+          subheadline: 'Asóciate con Ferrix Ventures para tu próximo capítulo',
+          description: 'Ya sea que estés listo para una salida estratégica o quieras escalar junto a operadores experimentados, proporcionamos el capital, la experiencia y la tecnología para desbloquear todo el potencial de tu negocio.',
+          cta: 'Explorar Alianza'
+        },
+        value: {
+          title: '¿Por Qué Asociarte con Ferrix Ventures?',
+          subtitle: 'No solo somos inversores, somos socios de crecimiento que entienden tu trayectoria',
+          benefits: [
+            {
+              icon: '🚀',
+              title: 'Metodología de Crecimiento Comprobada',
+              description: 'Nuestro enfoque sistemático ha ayudado a docenas de empresas a lograr un crecimiento de 3 a 10 veces a través de la transformación digital y la excelencia operativa.'
+            },
+            {
+              icon: '💰',
+              title: 'Valoraciones Justas y Decisiones Rápidas',
+              description: 'Ofrecemos valoraciones competitivas basadas en tu verdadero potencial, no solo en las métricas actuales. Decisiones en 30 días, no en 6 meses.'
+            },
+            {
+              icon: '🤝',
+              title: 'Enfoque Amigable para Fundadores',
+              description: 'Respetamos el legado que has construido. Ya sea que te mantengas involucrado o des un paso al costado, nos aseguramos de que tu visión y valores continúen.'
+            },
+            {
+              icon: '⚡',
+              title: 'Integración de IA y Tecnología',
+              description: 'Acceso a herramientas de IA de vanguardia y sistemas de automatización que costarían cientos de miles de dólares desarrollar de forma independiente.'
+            },
+            {
+              icon: '🎯',
+              title: 'Excelencia Operacional',
+              description: 'Nuestro equipo de operadores, no solo financieros, se arremanga para trabajar a tu lado en la ampliación de tu negocio.'
+            },
+            {
+              icon: '🌐',
+              title: 'Red y Recursos',
+              description: 'Accede a nuestra red de expertos de la industria, clientes potenciales y socios estratégicos para acelerar el crecimiento.'
+            }
+          ]
+        },
+        models: {
+          title: 'Nuestras Vías de Inversión',
+          subtitle: 'Ofrecemos dos caminos distintos para la asociación, adaptados a la escala de tu empresa y tus metas personales.',
+          options: [
+            {
+              name: 'Fondo de Alianza',
+              description: 'Para empresas establecidas que buscan un socio estratégico para acelerar el crecimiento mientras retienen una participación significativa.',
+              features: [
+                'Dirigido a empresas con ingresos de $5M - $50M',
+                'Adquirimos una participación del 20-49%',
+                'Tú mantienes el control, liderando el negocio día a día',
+                'Acceso a nuestro capital, tecnología y experiencia operativa',
+                'Enfocado en el crecimiento sostenible a largo plazo'
+              ],
+              ideal: 'Para propietarios que quieren reducir riesgos, tomar ganancias y ganar un poderoso socio de crecimiento.',
+              badge: 'Capital de Crecimiento'
+            },
+            {
+              name: 'Fondo de Adquisición',
+              description: 'Para dueños de negocios listos para una salida total o mayoritaria, asegurando que su legado sea protegido y amplificado.',
+              features: [
+                'Dirigido a empresas con ingresos de $10M - $100M',
+                'Adquirimos una participación del 50-100%',
+                'Transición flexible para el fundador (permanecer o salir)',
+                'Compromiso de preservar la cultura y marca de tu empresa',
+                'Un proceso de adquisición directo y eficiente'
+              ],
+              ideal: 'Para fundadores que planean su jubilación, buscan una nueva empresa o quieren asegurar su futuro financiero.',
+              badge: 'Adquisición Completa'
+            }
+          ]
+        },
+        criteria: {
+          title: 'Qué Buscamos',
+          subtitle: 'Nos asociamos con empresas que tienen fundamentos sólidos y potencial de crecimiento',
+          requirements: [
+            {
+              category: 'Perfil Financiero',
+              items: [
+                'Ingresos Anuales: $5M - $100M',
+                'Flujo de caja fuerte y predecible',
+                'Márgenes de beneficio saludables',
+                'Historial de rentabilidad'
+              ]
+            },
+            {
+              category: 'Características del Negocio',
+              items: [
+                'Modelo de negocio probado',
+                'Base de clientes leales',
+                'Ventaja competitiva sostenible',
+                'Oportunidades claras para la transformación digital'
+              ]
+            },
+            {
+              category: 'Industria',
+              items: [
+                'Mercado fragmentado y maduro',
+                'Baja penetración tecnológica',
+                'No dependiente de ciclos económicos volátiles',
+                'Agnósticos de la industria, pero con preferencia por B2B'
+              ]
+            }
+          ]
+        },
+        cta: {
+          title: '¿Listo para Discutir una Alianza?',
+          description: 'Demos el siguiente paso. Contáctanos para una conversación confidencial sobre el futuro de tu negocio.',
+          button: 'Iniciar Conversación'
+        }
+      },
+
       // Thesis Page
       thesis: {
         meta: {
@@ -440,6 +561,127 @@ Next Asset Class`,
         investorSubDesc: 'Access a differentiated investment opportunity: AI-powered acceleration of established, cash-flowing companies.',
         investorButton: 'Learn how to invest',
         apply: 'Apply'
+      },
+
+      // Acquisitions Page
+      acquisitions: {
+        meta: {
+          title: "Acquisitions & Partnerships - Ferrix Ventures",
+          description: "Partner with Ferrix Ventures for a strategic exit or to scale your business. We offer fair valuations, fast decisions, and a founder-friendly approach.",
+          keywords: ["business acquisition", "strategic partnership", "exit strategy", "scale business", "growth equity", "founder exit"]
+        },
+        hero: {
+          headline: 'Ready to Exit or Scale Together?',
+          subheadline: 'Partner with Ferrix Ventures for your next chapter',
+          description: 'Whether you\'re ready for a strategic exit or want to scale alongside experienced operators, we provide the capital, expertise, and technology to unlock your business\'s full potential.',
+          cta: 'Explore Partnership'
+        },
+        value: {
+          title: 'Why Partner with Ferrix Ventures?',
+          subtitle: 'We\'re not just investors—we\'re growth partners who understand your journey',
+          benefits: [
+            {
+              icon: '🚀',
+              title: 'Proven Growth Methodology',
+              description: 'Our systematic approach has helped dozens of businesses achieve 3-10x growth through digital transformation and operational excellence.'
+            },
+            {
+              icon: '💰',
+              title: 'Fair Valuations & Fast Decisions',
+              description: 'We provide competitive valuations based on your true potential, not just current metrics. Decisions in 30 days, not 6 months.'
+            },
+            {
+              icon: '🤝',
+              title: 'Founder-Friendly Approach',
+              description: 'We respect the legacy you\'ve built. Whether you stay involved or step back, we ensure your vision and values continue.'
+            },
+            {
+              icon: '⚡',
+              title: 'AI & Technology Integration',
+              description: 'Access to cutting-edge AI tools and automation systems that would cost hundreds of thousands to develop independently.'
+            },
+            {
+              icon: '🎯',
+              title: 'Operational Excellence',
+              description: 'Our team of operators, not just financiers, roll up their sleeves to work alongside you in scaling your business.'
+            },
+            {
+              icon: '🌐',
+              title: 'Network & Resources',
+              description: 'Tap into our network of industry experts, potential customers, and strategic partners to accelerate growth.'
+            }
+          ]
+        },
+        models: {
+          title: 'Our Investment Tracks',
+          subtitle: 'We offer two distinct paths for partnership, tailored to your company’s scale and your personal goals.',
+          options: [
+            {
+              name: 'Partnership Fund',
+              description: 'For established businesses looking for a strategic partner to accelerate growth while retaining significant ownership.',
+              features: [
+                'Targeting businesses with $5M - $50M in revenue',
+                'We acquire a 20-49% equity stake',
+                'You remain in control, leading the business day-to-day',
+                'Access to our capital, technology, and operational expertise',
+                'Focused on long-term, sustainable growth'
+              ],
+              ideal: 'For owners who want to de-risk, take some chips off the table, and gain a powerful growth partner.',
+              badge: 'Growth Equity'
+            },
+            {
+              name: 'Acquisition Fund',
+              description: 'For business owners ready for a full or majority exit, ensuring your legacy is protected and amplified.',
+              features: [
+                'Targeting businesses with $10M - $100M in revenue',
+                'We acquire a 50-100% equity stake',
+                'Flexible transition for the founder (stay on or exit)',
+                'Commitment to preserving your company culture and brand',
+                'A straightforward, efficient process to acquisition'
+              ],
+              ideal: 'For founders planning retirement, seeking a new venture, or wanting to secure their financial future.',
+              badge: 'Full Acquisition'
+            }
+          ]
+        },
+        criteria: {
+          title: 'What We Look For',
+          subtitle: 'We partner with businesses that have strong fundamentals and growth potential',
+          requirements: [
+            {
+              category: 'Financial Profile',
+              items: [
+                'Annual Revenue: $5M - $100M',
+                'Strong, predictable cash flow',
+                'Healthy profit margins',
+                'History of profitability'
+              ]
+            },
+            {
+              category: 'Business Characteristics',
+              items: [
+                'Proven business model',
+                'Loyal customer base',
+                'Sustainable competitive advantage',
+                'Clear opportunities for digital transformation'
+              ]
+            },
+            {
+              category: 'Industry',
+              items: [
+                'Fragmented, mature market',
+                'Low technology penetration',
+                'Not reliant on volatile economic cycles',
+                'Industry-agnostic, but with a preference for B2B'
+              ]
+            }
+          ]
+        },
+        cta: {
+          title: 'Ready to Discuss a Partnership?',
+          description: 'Let\'s take the next step. Contact us for a confidential conversation about your business\'s future.',
+          button: 'Start the Conversation'
+        }
       },
 
       // Thesis Page

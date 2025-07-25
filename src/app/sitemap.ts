@@ -4,42 +4,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ferrixventures.com'
   const lastModified = new Date()
 
-  return [
-    {
-      url: baseUrl,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 1,
-      alternates: {
-        languages: {
-          es: `${baseUrl}/es`,
-          en: baseUrl,
+  const pages = ['', '/thesis', '/acquisitions', '/acceleration'];
+  const languages = ['en', 'es'];
+
+  const sitemapEntries: MetadataRoute.Sitemap = [];
+
+  pages.forEach(page => {
+    const alternates = languages.reduce((acc, lang) => {
+      acc[lang] = `${baseUrl}/${lang}${page}`;
+      return acc;
+    }, {} as { [key: string]: string });
+
+    languages.forEach(lang => {
+      sitemapEntries.push({
+        url: `${baseUrl}/${lang}${page}`,
+        lastModified,
+        changeFrequency: 'monthly',
+        priority: page === '' ? 1 : 0.8,
+        alternates: {
+          languages: alternates,
         },
-      },
-    },
-    {
-      url: `${baseUrl}/thesis`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-      alternates: {
-        languages: {
-          es: `${baseUrl}/es/thesis`,
-          en: `${baseUrl}/thesis`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/es`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/es/thesis`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-  ]
+      });
+    });
+  });
+
+  return sitemapEntries
 }
