@@ -1,0 +1,21 @@
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+self["webpackHotUpdate_N_E"]("app/en/about/page",{
+
+/***/ "(app-pages-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%7B%22request%22%3A%22%2FUsers%2Fsantiagosaenzariza%2FLibrary%2FCloudStorage%2FGoogleDrive-ferrix.ventures%40gmail.com%2FMy%20Drive%2FFerrix%20Ventures%20-%20Shared%20Drive%2FProduct%2FWebsite%2Fferrix-ventures-website%2Fnode_modules%2Fnext%2Fdist%2Fclient%2Fimage-component.js%22%2C%22ids%22%3A%5B%5D%7D&server=false!":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%7B%22request%22%3A%22%2FUsers%2Fsantiagosaenzariza%2FLibrary%2FCloudStorage%2FGoogleDrive-ferrix.ventures%40gmail.com%2FMy%20Drive%2FFerrix%20Ventures%20-%20Shared%20Drive%2FProduct%2FWebsite%2Fferrix-ventures-website%2Fnode_modules%2Fnext%2Fdist%2Fclient%2Fimage-component.js%22%2C%22ids%22%3A%5B%5D%7D&server=false! ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+eval(__webpack_require__.ts("Promise.resolve(/*! import() eager */).then(__webpack_require__.t.bind(__webpack_require__, /*! ./node_modules/next/dist/client/image-component.js */ \"(app-pages-browser)/./node_modules/next/dist/client/image-component.js\", 23));\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwcC1wYWdlcy1icm93c2VyKS8uL25vZGVfbW9kdWxlcy9uZXh0L2Rpc3QvYnVpbGQvd2VicGFjay9sb2FkZXJzL25leHQtZmxpZ2h0LWNsaWVudC1lbnRyeS1sb2FkZXIuanM/bW9kdWxlcz0lN0IlMjJyZXF1ZXN0JTIyJTNBJTIyJTJGVXNlcnMlMkZzYW50aWFnb3NhZW56YXJpemElMkZMaWJyYXJ5JTJGQ2xvdWRTdG9yYWdlJTJGR29vZ2xlRHJpdmUtZmVycml4LnZlbnR1cmVzJTQwZ21haWwuY29tJTJGTXklMjBEcml2ZSUyRkZlcnJpeCUyMFZlbnR1cmVzJTIwLSUyMFNoYXJlZCUyMERyaXZlJTJGUHJvZHVjdCUyRldlYnNpdGUlMkZmZXJyaXgtdmVudHVyZXMtd2Vic2l0ZSUyRm5vZGVfbW9kdWxlcyUyRm5leHQlMkZkaXN0JTJGY2xpZW50JTJGaW1hZ2UtY29tcG9uZW50LmpzJTIyJTJDJTIyaWRzJTIyJTNBJTVCJTVEJTdEJnNlcnZlcj1mYWxzZSEiLCJtYXBwaW5ncyI6IkFBQUEsb09BQTBQIiwic291cmNlcyI6WyIiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0KC8qIHdlYnBhY2tNb2RlOiBcImVhZ2VyXCIgKi8gXCIvVXNlcnMvc2FudGlhZ29zYWVuemFyaXphL0xpYnJhcnkvQ2xvdWRTdG9yYWdlL0dvb2dsZURyaXZlLWZlcnJpeC52ZW50dXJlc0BnbWFpbC5jb20vTXkgRHJpdmUvRmVycml4IFZlbnR1cmVzIC0gU2hhcmVkIERyaXZlL1Byb2R1Y3QvV2Vic2l0ZS9mZXJyaXgtdmVudHVyZXMtd2Vic2l0ZS9ub2RlX21vZHVsZXMvbmV4dC9kaXN0L2NsaWVudC9pbWFnZS1jb21wb25lbnQuanNcIik7XG4iXSwibmFtZXMiOltdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(app-pages-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%7B%22request%22%3A%22%2FUsers%2Fsantiagosaenzariza%2FLibrary%2FCloudStorage%2FGoogleDrive-ferrix.ventures%40gmail.com%2FMy%20Drive%2FFerrix%20Ventures%20-%20Shared%20Drive%2FProduct%2FWebsite%2Fferrix-ventures-website%2Fnode_modules%2Fnext%2Fdist%2Fclient%2Fimage-component.js%22%2C%22ids%22%3A%5B%5D%7D&server=false!\n"));
+
+/***/ })
+
+});

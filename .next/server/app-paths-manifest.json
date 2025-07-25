@@ -1,6 +1,8 @@
 {
+  "/es/about/page": "app/es/about/page.js",
+  "/en/about/page": "app/en/about/page.js",
   "/[lang]/page": "app/[lang]/page.js",
+  "/[lang]/acceleration/page": "app/[lang]/acceleration/page.js",
   "/[lang]/acquisitions/page": "app/[lang]/acquisitions/page.js",
-  "/[lang]/thesis/page": "app/[lang]/thesis/page.js",
-  "/[lang]/acceleration/page": "app/[lang]/acceleration/page.js"
+  "/[lang]/thesis/page": "app/[lang]/thesis/page.js"
 }

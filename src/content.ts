@@ -20,7 +20,7 @@ export const content = {
 
       // Header
       nav: [
-        { text: 'Nosotros', href: '#about' },
+        { text: 'Nosotros', href: '/about' },
         { text: 'Aceleración', href: '/acceleration' },
         { text: 'Adquisiciones', href: '/acquisitions' },
         { text: 'Invierte', href: '/thesis' },
@@ -127,6 +127,10 @@ export const content = {
 
       // About
       about: {
+        meta: {
+          title: 'Nosotros - Ferrix Ventures',
+          description: 'Conoce Ferrix Ventures, nuestra historia, misión y equipo.'
+        },
         title: 'Nosotros',
         story: `"Fundamos Ferrix Ventures después de aprender una dura lección de nuestra experiencia previa en startups: construir desde cero es brutalmente difícil. Nos dimos cuenta de que el camino más efectivo hacia el impacto no es empezar desde cero, sino transformar lo que ya funciona. Tomamos negocios rentables y los escalamos con tecnología moderna y estrategias de startup."`,
         founder: 'Santiago Sáenz Ariza',
@@ -451,7 +455,7 @@ Próxima Clase de Activos`,
       },
       // Header
       nav: [
-        { text: 'About', href: '#about' },
+        { text: 'About', href: '/about' },
         { text: 'Acceleration', href: '/acceleration' },
         { text: 'Acquisitions', href: '/acquisitions' },
         { text: 'Invest', href: '/thesis' },
@@ -536,6 +540,10 @@ Próxima Clase de Activos`,
 
       // About
       about: {
+        meta: {
+          title: 'About Ferrix Ventures',
+          description: 'Learn about Ferrix Ventures, our story, mission, and team.'
+        },
         title: 'About',
         story: `"We founded Ferrix Ventures after learning a hard lesson from our previous startup experience: building from scratch is brutally difficult. We realized the most effective path to impact isn't starting from zero, but transforming what already works. We take profitable businesses and scale them with modern technology and startup strategies."`,
         founder: 'Santiago Sáenz Ariza',

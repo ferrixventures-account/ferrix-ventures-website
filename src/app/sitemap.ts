@@ -4,7 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ferrixventures.com'
   const lastModified = new Date()
 
-  const pages = ['', '/thesis', '/acquisitions', '/acceleration'];
+  const pages = ['', '/about', '/thesis', '/acquisitions', '/acceleration'];
   const languages = ['en', 'es'];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];
